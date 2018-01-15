@@ -1,18 +1,20 @@
 //////////////////////MEGAN///////////////////////
- 
-//arrow functions	
-//lexical																						
-//let vs var	
-//block	shadowing	
-
-//Private vs public (only what's returned)	
-//snapshot/multi-instance	can invoke returned function later on
-
-
-//+++++++++ Start Here! All problems are below. +++++++++//
-
 
 //////////////////PROBLEM 1////////////////////
+
+// Write a constructor function TestScores that takes in a student's name and their score percentage so it should have name and percent as the two parameters. This function should create a new object for each student with their test scores. 
+
+function TestScores(name, percent) {
+  this.name = name;
+  this.percent = percent;
+}
+
+// Now create a variable called suzy and that invokes TestScores passing in 'Suzy' as the name and '98%' as the percent. 
+
+var suzy = new TestScores('Suzy', '98%')
+
+
+//// ---- ////
 
 //Based on the following set of functions, what
 //is "this" in each of the following functions?

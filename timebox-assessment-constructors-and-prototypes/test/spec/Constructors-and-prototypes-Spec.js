@@ -23,10 +23,30 @@ function arrayDoesNotInclude(arr, values){
 }
 
 //Test Suite
-describe('scope-closures', function () {
+describe('constructors-and-prototypes', function () {
+
+	describe('Problem 1 - ', function() {
+	    it('should be a constructor function', function(){
+			expect(new TestScores).toEqual(jasmine.any(Object));
+		})
+		it('should have the correct name property and value', function() {
+			var Larry = new TestScores('Larry', '80%')
+			expect(Larry.name).toBe('Larry')
+		})
+		it('should have the correct name property and value', function() {
+			var Peggy = new TestScores('Peggy', '90%')
+			expect(Peggy.percent).toBe('90%')
+		})
+		it('Suzy should exist', function() {
+			expect(suzy).toBeDefined()
+		})
+		it('Suzy should have received 98% on the test', function() {
+			expect(suzy.percent).toBe('98%')
+		})
+	})
 
 
-	describe('Problem 1 - ', function () {
+	describe('Problem 1.5 - ', function () {
 		it('answerOne should exist', function () {
 			expect(answerOne).toBeDefined();
 		})
