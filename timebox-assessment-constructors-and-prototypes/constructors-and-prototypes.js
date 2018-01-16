@@ -4,14 +4,21 @@
 
 // Write a constructor function TestScores that takes in a student's name and their score percentage so it should have name and percent as the two parameters. This function should create a new object for each student with their test scores. 
 
+// Add a method called extraCredit that will add 5 to the percent the student received on the test. 
+
 function TestScores(name, percent) {
   this.name = name;
   this.percent = percent;
+  this.extraCredit = function(){
+    this.percent += 5
+  }
 }
 
-// Now create a new TestScore with the constructor function you made called 'suzy'. Suzy got '98%' on the test.
+// Now create a new TestScore with the constructor function you made called 'suzy'. Suzy got 98 on the test. Suzy did extraCredit to increase her score.
 
-var suzy = new TestScores('Suzy', '98%')
+var suzy = new TestScores('Suzy', 98)
+suzy.extraCredit()
+
 
 
 
@@ -49,7 +56,7 @@ function Caveman(name, age, weapon) {
 
 var larry = new Caveman('Larry', 25, 'rock')
 
-// Today larry slept first and then went out a picked a fight with another caveman and attacked him before that caveman came back and attacked larry three times. Make that happen with the above constuctor function methods. 
+// Today larry slept first and then went out a picked a fight with another caveman and attacked him. Then that caveman came  and attacked larry three times. Make that happen with the above constuctor function methods. 
 
 larry.sleep()
 larry.attack()

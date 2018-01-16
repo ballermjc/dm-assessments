@@ -24,24 +24,26 @@ function arrayDoesNotInclude(arr, values){
 
 //Test Suite
 describe('constructors-and-prototypes', function () {
-
+	
 	describe('Problem 1 - ', function() {
+		var larry = new TestScores('Larry', 80)
+		var peggy = new TestScores('Peggy', 90)
 	    it('should be a constructor function', function(){
 			expect(new TestScores).toEqual(jasmine.any(Object));
 		})
-		it('should have the correct name property and value', function() {
-			var Larry = new TestScores('Larry', '80%')
-			expect(Larry.name).toBe('Larry')
+		it('should have the correct name and percent property and value', function() {
+			expect(larry.name).toBe('Larry')
+			expect(peggy.percent).toBe(90)
 		})
-		it('should have the correct percent property and value', function() {
-			var Peggy = new TestScores('Peggy', '90%')
-			expect(Peggy.percent).toBe('90%')
+		it('extraCredit should at 5 to the student score', function() {
+			peggy.extraCredit()
+			expect(peggy.percent).toBe(95)
 		})
 		it('Suzy should exist', function() {
 			expect(suzy).toBeDefined()
 		})
-		it('Suzy should have received 98% on the test', function() {
-			expect(suzy.percent).toBe('98%')
+		it('Suzy should have received 98 percent on the test plus her extra credit', function() {
+			expect(suzy.percent).toBe(103)
 		})
 	})
 
