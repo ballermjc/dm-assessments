@@ -139,5 +139,18 @@ describe('context', function () {
 		})
 	})
 
-	
+	describe('Problem 8 - ', function () {
+		it('Q1 - q1CastleContext should be correct', function () {
+			let correct = q1CastleContext === "new"
+			expect(correct).toEqual(true)
+		})
+		it('Q2 - chambordInfo should be correct', function () {
+			let correct = chambordInfo === "Chambord Castle in France, grey stone, has a moat."
+			expect(correct).toEqual(true)
+		})
+		it('Q2 - getCastleContext should be correct', function () {
+			let correct = getCastleContext === "chambord"
+			expect(correct).toEqual(true)
+		})
+	})
 })

@@ -21,12 +21,14 @@ var context = "The object which 'owns' the current code, represented by 'this' k
 
 ///////////////////Problem 2//////////////////
 //Based on the following code, what is 'this' in the function
-//rubberDucks?
+//rubberDucks when we call it below?
 
 function rubberDucks(){
   let myContext = this.toString().split(']')[0].split('object ')[1]
   return `Rubber ducks are in the ${myContext}` 
 }
+
+rubberDucks()
 
 // var contextRubberDucks = "index.html"
 var contextRubberDucks = "window"
@@ -37,7 +39,7 @@ var contextRubberDucks = "window"
 
 ///////////////////Problem 3//////////////////
 //Based on the following code, what is 'this' in the method
-//breakMetro?
+//breakMetro when we call dc.breakMetro()?
 
 var dcMetro = {
   name: "Washington, D.C. Public Transit",
@@ -86,7 +88,7 @@ var valMoreToGo = NaN
 // var valMoreToGo = undefined
 // var valMoreToGo = -1500
 
-//What is the context of areWeThereYet?
+//What was the context of areWeThereYet when you called it?
 // var contextAreWeThereYet = "ascent"
 var contextAreWeThereYet = "window"
 // var contextAreWeThereYet = "Object"
@@ -124,7 +126,7 @@ var finalDescent = almostThere()
 // var valFinalDescent = undefined
 var valFinalDescent = -21500
 
-//What is the context of almostThere?
+//What was the context of almostThere when you called it?
 var contextAlmostThere = "descent"
 // var contextAlmostThere = "window"
 // var contextAlmostThere = "Object"
@@ -164,6 +166,8 @@ var book1CheckOut = book1.checkOut()
 // var q1Context = "explicit"
 var q1Context = "implicit"
 // var q1Context = "default"
+// var q1Context = "new"
+
 
 
 //Q2:
@@ -177,6 +181,8 @@ var book2CheckOut = checkOut.call(book2)
 var q2Context = "explicit"
 // var q2Context = "implicit"
 // var q2Context = "default"
+// var q2Context = "new"
+
 
 
 //Q3:
@@ -190,6 +196,8 @@ var globalCheckOut = checkOut()
 // var q3Context = "explicit"
 // var q3Context = "implicit"
 var q3Context = "default"
+// var q3Context = "new"
+
 
 
 //Q4:
@@ -204,6 +212,8 @@ var book2CheckOut2 = book1.checkOut.apply(book2)
 var q4Context = "explicit"
 // var q4Context = "implicit"
 // var q4Context = "default"
+// var q4Context = "new"
+
 
 
 ///////////////////Problem 7//////////////////
@@ -243,7 +253,35 @@ function Castle(name, location, color, material, hasMoat){
   this.color = color
   this.material = material
   this.hasMoat = hasMoat
+  this.getCastle = function(){
+    console.log(this)
+    return `${this.name} Castle in ${this.location}, ${this.color} ${this.material}, has ${this.hasMoat ? 'a' : 'no'} moat.`
+  }
 }
 
-//Q1
-//Before being called, what is is the 
+var chambord = new Castle("Chambord", "France", "grey", "stone", true)
+var hampton = new Castle("Hampton Court", "England", "red", "bricks", false)
+
+//Q1:
+//What is the context of calling 
+//new Castle("Chambord", "France", "Grey", "Stone", true)?
+
+// var q1CastleContext = "explicit"
+// var q1CastleContext = "implicit"
+// var q1CastleContext = "default"
+var q1CastleContext = "new"
+
+
+//Q2:
+//Call the getCastle method on chambord, and
+//save the result to a variable called chambordInfo.
+
+//CODE HERE
+var chambordInfo = chambord.getCastle()
+
+//What was 'this' when you called chambord.getCastle()?
+
+// var getCastleContext = "Castle"
+var getCastleContext = "chambord"
+// var getCastleContext = "new"
+// var getCastleContext = "window"
