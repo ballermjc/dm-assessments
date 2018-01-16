@@ -9,118 +9,57 @@ function TestScores(name, percent) {
   this.percent = percent;
 }
 
-// Now create a variable called suzy and that invokes TestScores passing in 'Suzy' as the name and '98%' as the percent. 
+// Now create a new TestScore with the constructor function you made called 'suzy'. Suzy got '98%' on the test.
 
 var suzy = new TestScores('Suzy', '98%')
-
-
-//// ---- ////
-
-//Based on the following set of functions, what
-//is "this" in each of the following functions?
-//Uncomment the correct answer.
-
-var functionOne = () => console.log('functionOne', this)
-//What is "this" in functionOne?
-
-var answerOne = "window"
-//var answerOne = "functionOne"
-//var answerOne = "scope-closures.js"
-
-
-function functionTwo() {
-  console.log('functionTwo', this)
-}
-//What is "this" in functionTwo?
-
-var answerTwo = "window"
-//var answerTwo = "functionTwo"
-//var answerTwo = "scope-closures.js"
-  
-var myObj = {
-  methods: {
-    functionThree: () => console.log('functionThree', this),
-    functionFour: function() {
-      console.log('functionFour', this)
-    }
-  }
-}
-
-//What is "this" in functionThree?
-
-var answerThree = "window"
-//var answerThree = "myObj"
-//var answerThree = "myObj.methods"
-//var answerThree = "scope-closures.js"
-
-//What is "this" in functionFour?
-
-//var answerFour = "window"
-//var answerFour = "myObj"
-var answerFour = "myObj.methods"
-//var answerFour = "scope-closures.js"
 
 
 
 //////////////////PROBLEM 2////////////////////
 
-//Based on the following set of functions, alter
-//the following arrays to contain only the strings
-//that contain the names of the variables that are 
-//in scope for the following code.
+// Write a constructor function Caveman that takes in a name, age, and weapon as its three parameters.
 
-var hades = "Hades"
+// Each caveman should have a property called health that is equal to 100 and a property called energy that is equal to 100.
 
-function greekPantheon(){
+// Then create a method called attack for when the caveman goes and attacks another human or animal. This method will make the caveman lose 10 energy. 
 
-  var zeus = "Zeus"
-  for(var olympians = 0; olympians < 12; olympians++) {
-    var hera = "Hera"
+// Create a method called attacked that when the caveman gets attacked by a human or animal the caveman will lose 10 heath. 
 
-    console.log(zeus + "'s Queen is " + hera)
+// Create a method called sleep that will restore the caveman 20 energy and 20 health. 
+
+function Caveman(name, age, weapon) {
+  this.name = name;
+  this.age = age;
+  this.weapon = weapon;
+  this.health = 100;
+  this.energy = 100;
+  this.attack = function() {
+    this.energy -= 10
   }
-
+  this.attacked = function() {
+    this.health -= 10;
+  }
+  this.sleep = function() {
+    this.energy += 20;
+    this.health += 20;
+  }
 }
 
-function greekUnderworld(season){
-  var gatekeeper = "Cerberus"
-  var response = hades + " is here."
+// Now create a new Caveman with the constructor function you made called 'larry'. Larry is 25 and has a 'rock' for a weapon.
 
-  if(season === "winter"){
-    var persephone = "Persephone"
-    
-    response = persephone + response.slice(5)
-  } 
-  console.log(persephone)
-  return response
-  
-}
+var larry = new Caveman('Larry', 25, 'rock')
 
-//REMOVE THE NAMES OF THE VARIABLES THAT DO NOT BELONG
+// Today larry slept first and then went out a picked a fight with another caveman and attacked him before that caveman came back and attacked larry three times. Make that happen with the above constuctor function methods. 
 
-//This array should only contain variables accessible in global scope
-// var globalScope = ["hades", "zeus", "olympians", "hera", "gatekeeper", "response", "persephone"]
-var greekGlobalScope = ["hades"]
+larry.sleep()
+larry.attack()
+larry.attacked()
+larry.attacked()
+larry.attacked()
 
-//This array should only contain variables accessible in scope of the 
-//function greekPantheon
-// var greekPantheonScope = ["hades", "zeus", "olympians", "hera", "gatekeeper", "response", "persephone"]
-var greekPantheonScope = ["hades", "zeus", "olympians", "hera"]
 
-//This array should only contain variables accessible in scope of the 
-//for-loop within the function greekPantheon
-// var greekPantheonLoopScope = ["hades", "zeus", "olympians", "hera", "gatekeeper", "response", "persephone"]
-var greekPantheonLoopScope = ["hades", "zeus", "olympians", "hera"]
 
-//This array should only contain variables accessible in scope of the 
-//the function greekUnderworld
-// var greekUnderworldScope = ["hades", "zeus", "olympians", "hera", "gatekeeper", "response", "persephone"]
-var greekUnderworldScope = ["hades", "gatekeeper", "response", "persephone"]
 
-//This array should only contain variables accessible in scope of the 
-//if statement of the function greekUnderworld
-// var greekUnderworldIfStatementScope = ["hades", "zeus", "olympians", "hera", "gatekeeper", "response", "persephone"]
-var greekUnderworldIfStatementScope = ["hades", "gatekeeper", "response", "persephone"]
 
 /////////////////////JAMES///////////////////////
 

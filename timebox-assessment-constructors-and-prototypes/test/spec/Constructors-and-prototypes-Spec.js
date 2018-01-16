@@ -33,7 +33,7 @@ describe('constructors-and-prototypes', function () {
 			var Larry = new TestScores('Larry', '80%')
 			expect(Larry.name).toBe('Larry')
 		})
-		it('should have the correct name property and value', function() {
+		it('should have the correct percent property and value', function() {
 			var Peggy = new TestScores('Peggy', '90%')
 			expect(Peggy.percent).toBe('90%')
 		})
@@ -45,72 +45,39 @@ describe('constructors-and-prototypes', function () {
 		})
 	})
 
-
-	describe('Problem 1.5 - ', function () {
-		it('answerOne should exist', function () {
-			expect(answerOne).toBeDefined();
-		})
-		it('answerOne should be correct', function () {
-			let correct = answerOne === 'window'
-			expect(correct).toBe(true);
-		})
-
-		it('answerTwo should exist', function () {
-			expect(answerTwo).toBeDefined();
-		})
-		it('answerTwo should be correct', function () {
-			let correct = answerTwo === 'window'
-			expect(correct).toBe(true);
-		})
-
-		it('answerThree should exist', function () {
-			expect(answerThree).toBeDefined();
-		})
-		it('answerThree should be correct', function () {
-			let correct = answerThree === 'window'
-			expect(correct).toBe(true);
-		})
-
-		it('answerFour should exist', function () {
-			expect(answerFour).toBeDefined();
-		})
-		it('answerFour should be correct', function () {
-			let correct = answerFour === 'myObj.methods'
-			expect(correct).toBe(true);
-		})
-	})
-
 	describe('Problem 2 - ', function () {
-		var greekGlobalScopeCorrect = ["hades"]
-		var greekPantheonScopeCorrect = ["hades", "zeus", "olympians", "hera"]
-		var greekPantheonLoopScopeCorrect = ["hades", "zeus", "olympians", "hera"]
-		var greekUnderworldScopeCorrect = ["hades", "gatekeeper", "persephone"]
-		var greekUnderworldIfStatementScopeCorrect = ["hades", "gatekeeper", "persephone"]
-		it('greekGlobalScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekGlobalScope, greekGlobalScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekGlobalScope, ["zeus", "olympians", "hera", "gatekeeper", "response", "persephone"])
-			expect(correct && !incorrect).toBe(true)
+		var fred = new Caveman('Fred', 45, 'stick')
+		var pebbles = new Caveman('Pebbles', 23, 'club')
+	    it('should be a constructor function', function(){
+			expect(new Caveman).toEqual(jasmine.any(Object));
 		})
-		it('greekPantheonScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekPantheonScope, greekPantheonScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekPantheonScope, ["gatekeeper", "response", "persephone"])
-			expect(correct && !incorrect).toBe(true)
+		it('caveman should have a weapon', function() {
+			expect(fred.weapon).toBe('stick')
 		})
-		it('greekPantheonLoopScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekPantheonLoopScope, greekPantheonLoopScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekPantheonLoopScope, ["gatekeeper", "response", "persephone"])
-			expect(correct && !incorrect).toBe(true)
+		it('health and energy should each exist and equal 100', function() {
+			expect(fred.health).toBe(100)
+			expect(pebbles.energy).toBe(100)
 		})
-		it('greekUnderworldScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekUnderworldScope, greekUnderworldScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekUnderworldScope, ["zeus", "olympians", "hera"])
-			expect(correct && !incorrect).toBe(true)
+		it('attack should remove 10 from energy', function() {
+			pebbles.attack()
+			expect(pebbles.energy).toBe(90)
 		})
-		it('greekUnderworldIfStatementScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekUnderworldIfStatementScope, greekUnderworldIfStatementScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekUnderworldIfStatementScope, ["zeus", "olympians", "hera"])
-			expect(correct && !incorrect).toBe(true)
+		it('sleep should add 20 to both energy and health', function() {
+			fred.sleep()
+			expect(fred.energy).toBe(120)
+			expect(fred.health).toBe(120)
 		})
+		it('Larry should exist with the given name, age, and weapon', function() {
+			expect(larry).toBeDefined()
+			expect(larry.name).toBe('Larry')
+			expect(larry.age).toBe(25)
+			expect(larry.weapon).toBe('rock')
+		})
+		it('Larry should have the correct energy and health after he sleeps, attacks once, and gets attacked three times', function() {
+			expect(larry.health).toBe(90)
+			expect(larry.energy).toBe(110)
+		})
+
 	})
 
 	/////////////////////JAMES///////////////////////
