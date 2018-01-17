@@ -1,10 +1,3 @@
-//JSON	quotes everywhere, 	always colons, 	no trailing commas	-- DONE
-//	.then	-- DONE
-// asynchronous nature --DONE																					
-// promise chaining	-- DONE
-//errors/catch -- DONE
-//custom promises	-- DONE
-
 //+++++++++ Start Here! All problems are below. +++++++++//
 
 ///////////////////Problem 1//////////////////
@@ -35,9 +28,10 @@ var correctJSON = { sky: "blue", earth: "red", trees: "green", snow: "white" }
 // var invalidJSONLineNumbers = [1, 2, 3, 4, 5, 6, 7, 8]
 var invalidJSONLineNumbers = [3, 5, 6, 7]
 
-//What are some JSON format errors? Remove the ones that are NOT JSON format errors,
-//leaving only descriptions of JSON format errors in the array badJSON.
-var badJSON = ["curly brackets", "quotations on everything", "no quotes on keys", "trailing commas", "always use colons"]
+//What are some common JSON format errors? Remove the ones that are NOT 
+//JSON format errors, leaving only descriptions of JSON format errors 
+//in the array badJSON.
+// var badJSON = ["curly brackets", "quotations on everything", "no quotes on keys", "trailing commas", "always use colons"]
 var badJSON = ["no quotes on keys", "trailing commas"]
 
 
@@ -53,10 +47,10 @@ var whereAreMyKeys = new Promise((resolve, reject) => setTimeout(() => resolve("
 //Within the function lostCityFinder, create a promise and save 
 //it to a variable called findAtlantis. findAtlantis should check 
 //the param lostCities (it will be an object). If the key 
-//'atlantis' points to a truthy value, the promise should resolve 
-//with the value of atlantis.
-//If it is not found, the promise should reject with the reason
-//"Can't find Atlantis!"
+//'atlantis' points to a truthy value on the object lostCities, the 
+//promise should resolve with the value of atlantis.
+//If it is not found, or falsy, the promise should reject with the 
+//reason "Can't find Atlantis!"
 
 function lostCityFinder(lostCities){
 
@@ -75,8 +69,8 @@ function lostCityFinder(lostCities){
 
 ///////////////////Problem 5//////////////////
 //There is a promise called goodnight. Chain a .then 
-//to the promise goodnight. The .then should 
-//assign to the variable night, the value of the resolved value.
+//to the promise goodnight. The .then should assign the 
+//resolved value to the variable night.
 
 var night = ""
 
@@ -87,11 +81,10 @@ goodnight.then(r => night = r)
 
 
 ///////////////////Problem 6//////////////////
-//There is a promise called goodDay. Chain a .then 
-//to the promise goodDay. The .then should 
-//assign to the variable stillNight, the value of the resolved value; 
-//the .catch should assign to the variable stillNight, reason 
-//the Promise was rejected.
+//There is a promise called goodDay. Chain a .then and a .catch
+//to the promise goodDay. The .then should assign the resolved 
+//value to the variable stillNight; the .catch should assign the
+//reason the Promise was rejected to the variable stillNight.
 
 var stillNight = ""
 
@@ -102,8 +95,8 @@ goodDay.then(r => stillNight = r).catch(r => stillNight = r)
 
 
 ///////////////////Problem 7//////////////////
-//Is this valid code with a Promise? Uncomment 
-//the right answer below the code.
+//Does the following code demonstrate a valid Promise? 
+//Uncomment the right answer below the code.
 
 var myInfo = {
   name: "",
