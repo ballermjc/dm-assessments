@@ -5,7 +5,7 @@
 //////////////////PROBLEM 1////////////////////
 
 //Create an array called rubberDucks with the values "yellow",
-//"red", "blue", "brown"
+//"red", "blue", "brown" in the array.
 
   //Code here
   var rubberDucks = ["yellow", "red", "blue", "brown"]
@@ -64,7 +64,7 @@ var arrayLength = rubberDucks.length
 //Create an function called changeElement that takes in three 
 //parameters: an array, an index, and a value. changeElement
 //should change the element at the numbered index of that array
-//to the given value.
+//to the given value. You do not need to return the array.
 
   //Code here
   function changeElement(arr, index, val){
@@ -73,7 +73,6 @@ var arrayLength = rubberDucks.length
 
 
 //////////////////PROBLEM 6////////////////////
-
 //Create a function called trim that takes in an array and removes 
 //the last element. trim should return the array.
 
@@ -130,9 +129,10 @@ var arrayLength = rubberDucks.length
 
 //////////////////PROBLEM 10////////////////////
 
-//Finish the function addNumbers so that it pushes the numbers 0 
-//up to (but not including) the value passed in into the array 
+//Finish the function addNumbers so that it pushes numbers starting at 
+//0 and up to (but not including) the value passed in, into the array 
 //myNumbers. Make sure to return the array myNumbers at the end.
+//ex: passed 5 --> return [0, 1, 2, 3, 4]
 
   function addNumbers(value){
       var myNumbers = []
@@ -148,8 +148,8 @@ var arrayLength = rubberDucks.length
 //////////////////PROBLEM 11////////////////////
 
 //Create a function called sunset that copies the existing array sunsetColors 
-//by reference and changes the first element to "blue". sunset should return
-//the copy of the array.
+//by reference and then changes the first element to "blue". sunset should 
+//return the copy of the array.
 
   var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"]
   
@@ -165,8 +165,8 @@ var arrayLength = rubberDucks.length
 //////////////////PROBLEM 12////////////////////
 
 //Create a function called sunrise that copies the value of the existing array
-//sunriseColors and changes the first element to "green". sunrise should return
-//the copy of the array.
+//sunriseColors and then changes the first element to "green". sunrise should 
+//return the copy of the array.
 
   var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"]
   
@@ -178,17 +178,12 @@ var arrayLength = rubberDucks.length
   }
 
 
-//=========DO NOT TOUCH THIS CODE=========//
-  function hello() {
-    return "hi"
-  }
-//============Continue below=============//
-
-
 //////////////////PROBLEM 13////////////////////
 
-//Finish the function canYouHearMe with a for loop that concatenates 
-//the result of invoking the function hello with param, 10 times.
+//Finish the function canYouHearMe. Assume that there is a function 
+//called hello. It takes no parameters. Inside canYouHearMe, make a 
+//for loop that concatenates param with the result of invoking the 
+//function hello, 10 times.
 
   function canYouHearMe(param){
 

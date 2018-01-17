@@ -64,7 +64,8 @@ describe('arrays-and-for-loops', function () {
 		})
 		it('should return element at given index', function () {
 			var arr = ["hey now", "hey NOW", "this is what", "dreams are made of"]
-			expect(getElement(arr, 3)).toEqual("dreams are made of");
+			let correct = getElement(arr, 3) === "dreams are made of"
+			expect(correct).toEqual(true);
 		})
 		it('should not modify array argument', function () {
 			var arr = [1, 2, 3]
@@ -77,7 +78,7 @@ describe('arrays-and-for-loops', function () {
 		it('should exist', function () {
 			expect(changeElement).toBeDefined();
 		})
-		it('should return [1, "HEY", 3] if passed [1, 2, 3], 1, "HEY"', function () {
+		it('should change array to [1, "HEY", 3] if passed [1, 2, 3], 1, "HEY"', function () {
 			var arr = [1, 2, 3]
 			changeElement(arr, 1, "HEY")
 			expect(arr[1]).toEqual("HEY");
@@ -85,7 +86,8 @@ describe('arrays-and-for-loops', function () {
 		it('should change element at given index to given value', function () {
 			var arr = ["hey now", "hey NOW", "this is what", "blahhhhhhh"]
 			changeElement(arr, 3, "dreams are made of")
-			expect(arr[3]).toEqual("dreams are made of");
+			let correct = arr[3] === "dreams are made of"
+			expect(correct).toEqual(true);
 		})
 		it('should modify only the one element of array argument', function () {
 			var arr = [1, 2, 3, 4, 5]
@@ -160,9 +162,8 @@ describe('arrays-and-for-loops', function () {
 			var arr = [1, 2, 3, 4, 5, 6, 7]
 			var shouldBe = [1, 2, 4, 5, 6, 7]
 			var newArr = cutItOut(arr)
-			console.log(newArr)
-			
-			expect(newArr[2]).toEqual(shouldBe[2]);
+			let correct = newArr[2] === shouldBe[2]
+			expect(correct).toEqual(true);
 		})
 	})
 
@@ -170,17 +171,26 @@ describe('arrays-and-for-loops', function () {
 		it('should exist', function () {
 			expect(changeName).toBeDefined();
 		})
+		it('should find return ["Rowling", "Sanderson", "Tolkein", "Lewis"] if passed ["Rowling", "Sanderson", "Tolkn", "Lewis"]', function () {
+			var arr = ["Rowling", "Sanderson", "Tolkn", "Lewis"]
+			var shouldBe = ["Rowling", "Sanderson", "Tolkein", "Lewis"]
+			var newArr = changeName(arr)
+			let correct = JSON.stringify(newArr) === JSON.stringify(arr)
+			expect(correct).toEqual(true);
+		})
 		it('should find "Tolkn" and change to "Tolkein"', function () {
 			var arr = [1, "Tolkn", 3]
 			var shouldBe = [1, "Tolkein", 3]
 			var newArr = changeName(arr)
-			expect(newArr[1]).toEqual(shouldBe[1]);
+			let correct = newArr[1] === shouldBe[1]
+			expect(correct).toEqual(true);
 		})
 		it('should only modify the element "Tolkn"', function () {
 			var arr = [1, "Tolkn", 3]
 			var shouldBe = [1, "Tolkein", 3]
 			var newArr = changeName(arr)
-			expect(newArr[0] === 1 && newArr[2] === 3).toBe(true);
+			let correct = newArr[0] === 1 && newArr[2] === 3
+			expect(correct).toBe(true);
 		})
 	})
 
@@ -193,6 +203,12 @@ describe('arrays-and-for-loops', function () {
 			var newArr = addNumbers(10)
 			expect(arrayIncludes(newArr, arr) && newArr.length === 10).toEqual(true);
 		})
+		it('should fill the returning array with numbers up to (but not including) the value passed in', function () {
+			var arr = [0, 1, 2, 3, 4, 5, 6, 7]
+			var newArr = addNumbers(8)
+			let correct = arrayIncludes(newArr, arr) && newArr.length === 8
+			expect(correct).toEqual(true);
+		})
 	})
 
 	describe('Problem 11 - sunset', function () {
@@ -203,10 +219,11 @@ describe('arrays-and-for-loops', function () {
 		var newSunset = sunset()
 		
 		it('should create a copy by reference and change the first element to blue', function () {
-			expect(newSunset[0] === "blue" && sunsetColors[0] === "blue").toBe(true);
+			let correct = newSunset[0] === "blue" && sunsetColors[0] === "blue"
+			expect(correct).toBe(true);
 		})
 		it('should not change the rest of the array', function () {
-			let allGood = false
+			let correct = false
 			if(sunsetColors[1] === "purple"
 				&& sunsetColors[2] === "pink"
 					&& sunsetColors[3] === "red"
@@ -216,8 +233,8 @@ describe('arrays-and-for-loops', function () {
 									&& newSunset[2] === "pink"
 										&& newSunset[3] === "red"
 											&& newSunset[4] === "orange"
-												&& newSunset[5] === "yellow") allGood = true
-			expect(allGood).toBe(true);
+												&& newSunset[5] === "yellow") correct = true
+			expect(correct).toBe(true);
 		})
 	})
 
@@ -229,10 +246,11 @@ describe('arrays-and-for-loops', function () {
 		var newSunrise = sunrise()
 		
 		it('should create a copy by reference and change the first element to green', function () {
-			expect(newSunrise[0] === "green" && sunriseColors[0] === "yellow").toBe(true);
+			let correct = newSunrise[0] === "green" && sunriseColors[0] === "yellow"
+			expect(correct).toBe(true);
 		})
 		it('should not change the rest of the array', function () {
-			let allGood = false
+			let correct = false
 			if(sunriseColors[1] === "orange"
 				&& sunriseColors[2] === "red"
 					&& sunriseColors[3] === "pink"
@@ -242,20 +260,21 @@ describe('arrays-and-for-loops', function () {
 									&& newSunrise[2] === "red"
 										&& newSunrise[3] === "pink"
 											&& newSunrise[4] === "purple"
-												&& newSunrise[5] === "blue") allGood = true
-			expect(allGood).toBe(true);
+												&& newSunrise[5] === "blue") correct = true
+			expect(correct).toBe(true);
 		})
 	})
 
 	describe('Problem 13 - ', function () {
 		it('should call hello 10 times', function () {
-			iCannotHearYou = canYouHearMe("")
-			expect(iCannotHearYou).toEqual("hihihihihihihihihihi");
+			let iCannotHearYou = canYouHearMe("")
+			let correct = iCannotHearYou === "hIhIhIhIhIhIhIhIhIhI"
+			expect(correct).toEqual(true);
 		})
 		it('should add result of hello() to param 10 times', function () {
-			hey = canYouHearMe("um ")
-			hey = hey.split(' ')
-			expect(hey[1]).toEqual("hihihihihihihihihihi");
+			let hey = canYouHearMe("um ")
+			let correct = hey === "um hIhIhIhIhIhIhIhIhIhI"
+			expect(correct).toEqual(true);
 		})
 		it('should return a string', function() {
 			expect(canYouHearMe('') && typeof canYouHearMe('') === 'string').toBe(true)
