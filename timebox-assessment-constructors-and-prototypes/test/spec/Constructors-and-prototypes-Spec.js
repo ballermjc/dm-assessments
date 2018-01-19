@@ -82,6 +82,35 @@ describe('constructors-and-prototypes', function () {
 
 	})
 
+	describe('Problem 2.5 - ', function () {
+		var seshat = new EgyptianGoddesses('Seshat', 'Written Word', 'Clever and Logical', 'Not in touch with her emotions')
+		var nephthys = new EgyptianGoddesses('Nephthys', 'Death', 'Protective', 'Misunderstood')
+		it('should be a constructor function', function(){
+			expect(new EgyptianGoddesses).toEqual(jasmine.any(Object));
+		})
+		it('should have the correct name, oversees, strength and weakness properties', function() {
+			expect(seshat.name).toBeDefined()
+			expect(seshat.oversees).toBeDefined()
+			expect(seshat.strength).toBeDefined()
+			expect(seshat.weakness).toBeDefined()
+		})
+		it('the addSymbolism, editWeakness, and editStrength methods should exist', function() {
+			expect(nephthys.addSymbolism).toBeDefined()
+			expect(nephthys.editWeakness).toBeDefined()
+			expect(nephthys.editStrength).toBeDefined()
+		})
+		it('Maat should exist and have the correct properties', function() {
+			expect(maat).toBeDefined()
+			expect(maat.oversees).toBe('Truth and Justice')
+			expect(maat.strength).toBeDefined()
+			expect(maat.weakness).toBeDefined()
+		})
+		it('Maat should have an alerted symbolism of Falcons and Hawks', function() {
+			
+		})
+	})
+
+
 	/////////////////////JAMES///////////////////////
 
 	describe('Problem 3 - ', function () {

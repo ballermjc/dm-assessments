@@ -67,6 +67,50 @@ larry.attacked()
 
 
 
+//////////////////PROBLEM 2.5////////////////////
+
+// Create a constructor function called EgyptianGoddesses that takes in name, oversees, strength, and weakness as its four parameters. 
+
+// Create a method called addSymbolism that takes in a symbol as the parameter and alerts that symbol. 
+
+// Create a method called editWeakness that takes in  newWeakness as the parameter and edits the weakness property to be that new weakness.
+
+// Create a method called editStrength that takes in  newStrength as the parameter and edits the strength property to be that new strength.
+
+function EgyptianGoddesses(name, oversees, strength, weakness) {
+  this.name = name;
+  this.oversees = oversees;
+  this.strength = strength;
+  this.weakness = weakness;
+  this.addSymbolism = function(symbol) {
+    alert(symbol)
+  }
+  this.editWeakness = function(newWeakness) {
+    this.weakness = newWeakness
+  }
+  this.editStrength = function(newStrength) {
+    this.strength = newStrength
+  }
+}
+
+// Now create a new EgyptainGoddess with the constructor function you made called 'Maat'. Maat oversees 'Truth and Justice', has a strength of being 'Balancing and Just' and a weakness of being 'Exacting in her standards.'.
+
+var maat = new EgyptianGoddesses('Maat', 'Truth and Justice', 'Balancing and Just', 'Exacting in her standards')
+
+// Maat has symbols of 'Falcons and Hawks'. 
+
+maat.addSymbolism('Falcons and Hawks')
+
+// Maat's weakness has changed from 'Exacting in her standards' to be 'No second chances'.
+
+maat.editWeakness('No second chances')
+
+// Maat's strength has changed from 'Balancing and Just' to be 'Balancing, Just, and Clever'.
+
+maat.editStrength('Balancing, Just, and Clever')
+
+
+
 
 /////////////////////JAMES///////////////////////
 
