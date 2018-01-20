@@ -24,65 +24,8 @@ function arrayDoesNotInclude(arr, values){
 
 //Test Suite
 describe('constructors-and-prototypes', function () {
-	
-	describe('Problem 1 - ', function() {
-		var larry = new TestScores('Larry', 80)
-		var peggy = new TestScores('Peggy', 90)
-	    it('should be a constructor function', function(){
-			expect(new TestScores).toEqual(jasmine.any(Object));
-		})
-		it('should have the correct name and percent property and value', function() {
-			expect(larry.name).toBe('Larry')
-			expect(peggy.percent).toBe(90)
-		})
-		it('extraCredit should at 5 to the student score', function() {
-			peggy.extraCredit()
-			expect(peggy.percent).toBe(95)
-		})
-		it('Suzy should exist', function() {
-			expect(suzy).toBeDefined()
-		})
-		it('Suzy should have received 98 percent on the test plus her extra credit', function() {
-			expect(suzy.percent).toBe(103)
-		})
-	})
 
-	describe('Problem 2 - ', function () {
-		var fred = new Caveman('Fred', 45, 'stick')
-		var pebbles = new Caveman('Pebbles', 23, 'club')
-	    it('should be a constructor function', function(){
-			expect(new Caveman).toEqual(jasmine.any(Object));
-		})
-		it('caveman should have a weapon', function() {
-			expect(fred.weapon).toBe('stick')
-		})
-		it('health and energy should each exist and equal 100', function() {
-			expect(fred.health).toBe(100)
-			expect(pebbles.energy).toBe(100)
-		})
-		it('attack should remove 10 from energy', function() {
-			pebbles.attack()
-			expect(pebbles.energy).toBe(90)
-		})
-		it('sleep should add 20 to both energy and health', function() {
-			fred.sleep()
-			expect(fred.energy).toBe(120)
-			expect(fred.health).toBe(120)
-		})
-		it('Larry should exist with the given name, age, and weapon', function() {
-			expect(larry).toBeDefined()
-			expect(larry.name).toBe('Larry')
-			expect(larry.age).toBe(25)
-			expect(larry.weapon).toBe('rock')
-		})
-		it('Larry should have the correct energy and health after he sleeps, attacks once, and gets attacked three times', function() {
-			expect(larry.health).toBe(90)
-			expect(larry.energy).toBe(110)
-		})
-
-	})
-
-	describe('Problem 2.5 - ', function () {
+	describe('Problem .5 - ', function () {
 		var seshat = new EgyptianGoddesses('Seshat', 'Written Word', 'Clever and Logical', 'Not in touch with her emotions')
 		var nephthys = new EgyptianGoddesses('Nephthys', 'Death', 'Protective', 'Misunderstood')
 		it('should be a constructor function', function(){
@@ -94,20 +37,51 @@ describe('constructors-and-prototypes', function () {
 			expect(seshat.strength).toBeDefined()
 			expect(seshat.weakness).toBeDefined()
 		})
-		it('the addSymbolism, editWeakness, and editStrength methods should exist', function() {
-			expect(nephthys.addSymbolism).toBeDefined()
-			expect(nephthys.editWeakness).toBeDefined()
-			expect(nephthys.editStrength).toBeDefined()
-		})
-		it('Maat should exist and have the correct properties', function() {
+		it('Maat should exist and have the correct properties and values', function() {
 			expect(maat).toBeDefined()
 			expect(maat.oversees).toBe('Truth and Justice')
-			expect(maat.strength).toBeDefined()
-			expect(maat.weakness).toBeDefined()
+			expect(maat.strength).toBe('Balancing and Just')
+			expect(maat.weakness).toBe('Exacting in her standards')
 		})
-		it('Maat should have an alerted symbolism of Falcons and Hawks', function() {
-			
+	})
+	
+	describe('Problem 1 - ', function() {
+		var larry = new TestScores('Larry', 80)
+		var peggy = new TestScores('Peggy', 90)
+	    it('should be a constructor function', function(){
+			expect(new TestScores).toEqual(jasmine.any(Object));
 		})
+		it('should have the correct name and percent property and value', function() {
+			expect(larry.name).toBe('Larry')
+			expect(peggy.percent).toBe(90)
+		})
+		it('Suzy should exist', function() {
+			expect(suzy).toBeDefined()
+		})
+	})
+
+	describe('Problem 2 - ', function () {
+		var fred = new Caveman('Fred', 45, 'stick')
+		var pebbles = new Caveman('Pebbles', 23, 'club')
+	    it('should be a constructor function', function(){
+			expect(new Caveman).toEqual(jasmine.any(Object));
+		})
+		it('caveman should have name, age, and weapon properties', function() {
+			expect(fred.weapon).toBe('stick')
+			expect(fred.name).toBe('Fred')
+			expect(fred.age).toBe(45)
+		})
+		it('health and energy should each exist and equal 100', function() {
+			expect(fred.health).toBe(100)
+			expect(pebbles.energy).toBe(100)
+		})
+		it('Larry should exist with the given name, age, and weapon', function() {
+			expect(larry).toBeDefined()
+			expect(larry.name).toBe('Larry')
+			expect(larry.age).toBe(25)
+			expect(larry.weapon).toBe('rock')
+		})
+
 	})
 
 

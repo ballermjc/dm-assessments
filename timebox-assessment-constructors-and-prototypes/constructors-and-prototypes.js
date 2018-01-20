@@ -1,23 +1,46 @@
 //////////////////////MEGAN///////////////////////
 
-//////////////////PROBLEM 1////////////////////
 
-// Write a constructor function TestScores that takes in a student's name and their score percentage so it should have name and percent as the two parameters. This function should create a new object for each student with their test scores. 
+//////////////////PROBLEM .5////////////////////
 
-// Add a method called extraCredit that will add 5 to the percent the student received on the test. 
+// Get the following constructor function to pass the tests.
 
-function TestScores(name, percent) {
-  this.name = name;
-  this.percent = percent;
-  this.extraCredit = function(){
-    this.percent += 5
+function EgyptianGoddesses(name, oversees, strength, weakness) {
+  name = name;
+  oversees = oversees;
+  strength = strength;
+  weakness = weakness;
+
+  return function() {
+    name,
+    oversees,
+    strength,
+    weakness
   }
+  
 }
 
-// Now create a new TestScore with the constructor function you made called 'suzy'. Suzy got 98 on the test. Suzy did extraCredit to increase her score.
+// The variable maat below news to create a new Egyptian Goddess.
 
-var suzy = new TestScores('Suzy', 98)
-suzy.extraCredit()
+var maat = ['Maat', 'Truth and Justice', 'Balancing and Just', 'Exacting in her standards']
+
+
+
+
+//////////////////PROBLEM 1////////////////////
+
+// Get the following constructor function to pass the tests.
+
+function TestScores() {
+  this.name;
+  this.percent;
+
+  return this.name + this.percent
+}
+
+
+// Now create a new TestScore with the about constructor function called 'suzy'. Suzy got 98 on the test. 
+
 
 
 
@@ -28,11 +51,6 @@ suzy.extraCredit()
 
 // Each caveman should have a property called health that is equal to 100 and a property called energy that is equal to 100.
 
-// Then create a method called attack for when the caveman goes and attacks another human or animal. This method will make the caveman lose 10 energy. 
-
-// Create a method called attacked that when the caveman gets attacked by a human or animal the caveman will lose 10 heath. 
-
-// Create a method called sleep that will restore the caveman 20 energy and 20 health. 
 
 function Caveman(name, age, weapon) {
   this.name = name;
@@ -40,74 +58,16 @@ function Caveman(name, age, weapon) {
   this.weapon = weapon;
   this.health = 100;
   this.energy = 100;
-  this.attack = function() {
-    this.energy -= 10
-  }
-  this.attacked = function() {
-    this.health -= 10;
-  }
-  this.sleep = function() {
-    this.energy += 20;
-    this.health += 20;
-  }
 }
 
 // Now create a new Caveman with the constructor function you made called 'larry'. Larry is 25 and has a 'rock' for a weapon.
 
 var larry = new Caveman('Larry', 25, 'rock')
 
-// Today larry slept first and then went out a picked a fight with another caveman and attacked him. Then that caveman came  and attacked larry three times. Make that happen with the above constuctor function methods. 
-
-larry.sleep()
-larry.attack()
-larry.attacked()
-larry.attacked()
-larry.attacked()
 
 
 
 
-//////////////////PROBLEM 2.5////////////////////
-
-// Create a constructor function called EgyptianGoddesses that takes in name, oversees, strength, and weakness as its four parameters. 
-
-// Create a method called addSymbolism that takes in a symbol as the parameter and alerts that symbol. 
-
-// Create a method called editWeakness that takes in  newWeakness as the parameter and edits the weakness property to be that new weakness.
-
-// Create a method called editStrength that takes in  newStrength as the parameter and edits the strength property to be that new strength.
-
-function EgyptianGoddesses(name, oversees, strength, weakness) {
-  this.name = name;
-  this.oversees = oversees;
-  this.strength = strength;
-  this.weakness = weakness;
-  this.addSymbolism = function(symbol) {
-    alert(symbol)
-  }
-  this.editWeakness = function(newWeakness) {
-    this.weakness = newWeakness
-  }
-  this.editStrength = function(newStrength) {
-    this.strength = newStrength
-  }
-}
-
-// Now create a new EgyptainGoddess with the constructor function you made called 'Maat'. Maat oversees 'Truth and Justice', has a strength of being 'Balancing and Just' and a weakness of being 'Exacting in her standards.'.
-
-var maat = new EgyptianGoddesses('Maat', 'Truth and Justice', 'Balancing and Just', 'Exacting in her standards')
-
-// Maat has symbols of 'Falcons and Hawks'. 
-
-maat.addSymbolism('Falcons and Hawks')
-
-// Maat's weakness has changed from 'Exacting in her standards' to be 'No second chances'.
-
-maat.editWeakness('No second chances')
-
-// Maat's strength has changed from 'Balancing and Just' to be 'Balancing, Just, and Clever'.
-
-maat.editStrength('Balancing, Just, and Clever')
 
 
 
