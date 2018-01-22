@@ -1,19 +1,3 @@
-//ES6	
-//let	-- done
-//const	-- done
-//template literals	-- done
-//spread -- done
-//rest -- done 
-//destructuring	-- done
-//arrow functions -- done
-var color = "blue"
-var getter = {
-  color: "",
-  get: function getter(param) { this.color = param }
-}
-
-
-
 //+++++++++ Start Here! All problems are below. +++++++++//
 
 
