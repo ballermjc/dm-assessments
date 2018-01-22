@@ -5,6 +5,8 @@
 
 // Get the following constructor function to pass the tests.
 
+//Broken on purpose 
+
 function EgyptianGoddesses(name, oversees, strength, weakness) {
   name = name;
   oversees = oversees;
@@ -30,6 +32,8 @@ var maat = ['Maat', 'Truth and Justice', 'Balancing and Just', 'Exacting in her 
 //////////////////PROBLEM 1////////////////////
 
 // Get the following constructor function to pass the tests.
+
+//Broken on purpose 
 
 function TestScores() {
   this.name;
