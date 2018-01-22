@@ -71,6 +71,18 @@ describe('objects-data-types', function () {
 								returned[3].city === "Los Angeles"
 			expect(correct).toEqual(true);
 		})
+		it('should return an array of objects', function () {
+			var names = ["blah", "akjsdhf"]
+
+			var people = {
+				blah: { eh: 'Canada' },
+				akjsdhf: { eh: 'Vancouver' },
+			}
+			var returned = keyAccessor(names, people)
+			var correct = returned[0].eh === "Canada" &&
+							returned[1].eh === "Vancouver"
+			expect(correct).toEqual(true);
+		})
 
 	})
 
@@ -154,14 +166,14 @@ describe('objects-data-types', function () {
 			let correct = typeof myObject === 'object'
 			expect(correct).toBe(true);
 		})
-		it('should have a name property', function () {
-			expect(myObject.name).toBeDefined();
+		it('should have a name string property', function () {
+			expect(typeof myObject.name === 'string').toBe(true);
 		})
-		it('should have a team property', function () {
-			expect(myObject.team).toBeDefined();
+		it('should have a team string property', function () {
+			expect(typeof myObject.team === 'string').toBe(true);
 		})
 		it('should have a whatTeam method', function () {
-			expect(myObject.whatTeam).toBeDefined();
+			expect(typeof myObject.whatTeam === 'function').toBe(true);
 		})
 		it('.whatTeam() should return the team property', function () {
 			expect(myObject.team === myObject.whatTeam()).toBe(true);
@@ -231,10 +243,10 @@ describe('objects-data-types', function () {
 			expect(nananan(6)).toEqual(3);
 		})
 		it('should check if "hello world" / 2 is not a number', function () {
-			expect(nananan("hello world")).toEqual("BATMAN!");
+			expect(nananan("hello world")).toEqual("FLYING NOCTURNAL MAMMAL MAN!");
 		})
 		it('var na should equal the result of calling nananan with NaN', function () {
-			expect(nananan(NaN)).toEqual("BATMAN!");
+			expect(nananan(NaN)).toEqual("FLYING NOCTURNAL MAMMAL MAN!");
 		})
 	})
 

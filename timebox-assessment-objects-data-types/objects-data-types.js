@@ -1,14 +1,3 @@
-//Objects	
-//dot notation -- DONE
-//square bracket -- DONE
-//methods	-- DONE
-//objects are copy by reference	-- DONE
-//when to use variables & square bracket -- DONE	
-//for in loops -- DONE
-//.keys -- DONE														
-
-
-
 ///////////////////Problem 1///////////////////
 //Given the object below, uncomment the correct usage
 //of dot notation to access the duck's "name" property,
@@ -52,13 +41,16 @@ person.moveCities = function(newCity){
 ///////////////////Problem 3///////////////////
 //Create a function called "keyAccessor" that takes
 //in 2 parameters, an array of names, and an object.
+//The array of names represents the keys in the object.
 //keyAccessor should loop through the array of names, 
-//accessing the values of the given keys in the object, 
+//accessing the values of the each name (key) in the object, 
 //and pushing the values into an empty array. 
 //keyAccessor should return the new array.
 
+//Example set of names that could be passed in
 var names = ["anne", "brandon", "charles", "diana"]
 
+//Example object that could be passed in
 var people = {
   anne: { city: "New York", age: 23 },
   brandon: { city: "London", age: 28 },
@@ -217,12 +209,12 @@ function undefiner(arr){
 ///////////////////Problem 16//////////////////
 //Create a function called nananan that takes in 
 //a parameter. If the parameter divided by 2 is NaN, 
-//return "BATMAN!". Otherwise, return the result of
+//return "FLYING NOCTURNAL MAMMAL MAN!". Otherwise, return the result of
 //the parameter divided by 2.
 
 function nananan(a){
   if(isNaN(a / 2)){
-    return 'BATMAN!'
+    return 'FLYING NOCTURNAL MAMMAL MAN!'
   } else {
     return a / 2
   }
