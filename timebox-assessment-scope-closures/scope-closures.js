@@ -1,12 +1,3 @@
-//arrow functions	
-//lexical																						
-//let vs var	
-//block	shadowing	
-
-//Private vs public (only what's returned)	
-//snapshot/multi-instance	can invoke returned function later on
-
-
 //+++++++++ Start Here! All problems are below. +++++++++//
 
 
