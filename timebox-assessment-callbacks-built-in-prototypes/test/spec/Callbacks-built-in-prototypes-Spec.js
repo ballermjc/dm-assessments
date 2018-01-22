@@ -25,8 +25,14 @@ describe('callbacks-built-in-prototypes', function () {
 		})
 		it('should use a .map', function () {
 			var places = ["England", "Scotland", "Westeros"];
+			
 			expect(JSON.stringify(dragonMapper(places))).not.toEqual(JSON.stringify(places));
 		})
+		it('should use a .map', function () {
+			var correct = dragonMapper.toString().includes(".map")	
+			expect(correct).toEqual(true);
+		})
+			
 	})
 
 	describe('Problem 2 - cookieLoversOnly', function () {
@@ -81,6 +87,11 @@ describe('callbacks-built-in-prototypes', function () {
 			})
 			expect(allGood).toBe(true);
 		})
+
+		it('should use the filter array method', function () {
+			var correct = cookieLoversOnly.toString().includes(".filter")	
+			expect(correct).toEqual(true);
+		})
 	})
 
 	describe('Problem 3 - changeValue', function () {
@@ -93,25 +104,28 @@ describe('callbacks-built-in-prototypes', function () {
 		changeValue(old, (str) => newArr.push(str.toUpperCase()))
 		let shouldBe = ["ELIZABETH", "MARY", "VICTORIA"]
 		it('should return an array with the given string added to the end of each element', function () {
-			let allGood = true
+			let correct = true
 			shouldBe.map((e, i) => {
-				if(e !== newArr[i]) allGood = false
+				if(e !== newArr[i]) correct = false
 			})
-			expect(allGood).toBe(true);
+			expect(correct).toBe(true);
 		})
-		it('should use a forEach and return the result', function () {
-			
-			expect(changeValue([1, 2, 3], () => 'red')).toEqual(undefined);
+		it('should use a forEach', function () {
+			let correct = changeValue.toString().includes('.forEach') 
+			expect(correct).toEqual(true);
 		})
 	})
 
 	describe('Problem 4 - findProduct', function () {
-		
 		it('should exist', function () {
 			expect(findProduct).toBeDefined();
 		})
 		it('should find the product of array of numbers', function() {
 			expect(findProduct([1, 4, 3, 7, 9])).toEqual(756)
+		})
+		it('should use a .reduce', function() {
+			let correct = findProduct.toString().includes(".reduce")
+			expect(correct).toEqual(true)
 		})
 	})
 
@@ -120,17 +134,16 @@ describe('callbacks-built-in-prototypes', function () {
 		it('should exist', function () {
 			expect(cipherize).toBeDefined();
 		})
-		it('should return "3t" when called as cipherize(["books", "computers", "paper", "tablets"], "tablets", 5)', function() {
-			expect(cipherize(["books", "computers", "paper", "tablets"], "tablets", 5)).toEqual("3t")
+		it('should return "l" when called as cipherize(["books", "computers", "paper", "tablets"], "tablets")', function() {
+			expect(cipherize(["books", "computers", "paper", "tablets"], "tablets")).toEqual("l")
 		})
-		it('should return cipher pair when called', function() {
-			expect(cipherize(["blue", "red", "green"], "blue", 7)).toEqual("0e")
+		it('should return "" when called as cipherize(["blue", "green", "yellow", "purple", "red"], "red")', function() {
+			expect(cipherize(["blue", "green", "yellow", "purple", "red"], "red", 7)).toEqual("")
 		})
-		it('should return cipher pair when called', function() {
-			expect(cipherize(["blue", "red", "green"], "purple", 7)).toEqual("-1p")
-		})
-		it('should return cipher pair when called', function() {
-			expect(cipherize(["blue", "red", "green"], "purple", 17)).toEqual("-1")
+		it('should use indexOf, charAt', function() {
+			let x = cipherize.toString()
+			let correct = x.includes(".indexOf") && x.includes(".charAt")
+			expect(correct).toEqual(true)
 		})
 	})
 
@@ -145,6 +158,12 @@ describe('callbacks-built-in-prototypes', function () {
 		it('should return reverse of string argument', function() {
 			expect(reverseMe("mxyzptlk")).toEqual("kltpzyxm")
 		})
+		it('should use the built-in methods for splitting, reversing, and joining', function() {
+			let correct = reverseMe.toString().includes(".reverse")
+							&& reverseMe.toString().includes(".split")
+								&& reverseMe.toString().includes(".join")
+			expect(correct).toEqual(true)
+		})
 	})
 
 	describe('Problem 7 - stringItOut', function () {
@@ -158,11 +177,15 @@ describe('callbacks-built-in-prototypes', function () {
 		it('should return string version of passed-in array, sorted greatest to least', function() {
 			expect(stringItOut([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10])).toEqual("10,9,8,7,6,5,4,3,2,1")
 		})
+		it('should use built-in methods for sorting and making strings', function() {
+			let correct = stringItOut.toString()
+			correct = correct.includes(".sort") && correct.includes(".toString()")
+			expect(correct).toEqual(true)
+		})
 
 	})
 
 	describe('Problem 8 - mathResult', function () {
-		// var correct = Math.sqrt(Math.log(2) * Math.tan(3))
 		var correct = Math.sin((Math.log(2) + Math.tan(3) * 100))
 		it('should exist', function () {
 			expect(mathResult).toBeDefined();
@@ -185,21 +208,20 @@ describe('callbacks-built-in-prototypes', function () {
 			var a = invokesCallbacks(28, greaterThan10, lessThan10)
 			var b = invokesCallbacks(10, greaterThan10, lessThan10)
 			var c = invokesCallbacks(5, greaterThan10, lessThan10)
-			let allGood = a === "I am greater than 10" && b === "I am less than or equal to 10" && c === "I am less than or equal to 10"
-			expect(allGood).toBe(true)
+			let correct = a === "I am greater than 10" && b === "I am less than or equal to 10" && c === "I am less than or equal to 10"
+			expect(correct).toBe(true)
 		})
 		it('should return the first callback param invoked if num param > 10', function() {
 			var a = invokesCallbacks(28, greaterThan10Too, lessThan10Too)
 			var b = invokesCallbacks(10, greaterThan10Too, lessThan10Too)
 			var c = invokesCallbacks(5, greaterThan10Too, lessThan10Too)
-			let allGood = a === 27 && b === 3 && c === 3
-			expect(allGood).toBe(true)
+			let correct = a === 27 && b === 3 && c === 3
+			expect(correct).toBe(true)
 		})
 		
 	})
 
 	describe('Problem 10 - greeting', function () {
-		// setTimeout(() => console.log(greeting), 3001)
 		it('should be undefined less than 1 second after timedGreeting is called', function () {
 			let allGood = false
 			timedGreeting(() => "hello")
