@@ -27,7 +27,7 @@ describe('context', function () {
 
 	describe('Problem 1 - context', function () {
 		it('should be correct', function () {
-			let correct = context === "The object which 'owns' the current code, represented by 'this' keyword."
+			let correct = context === "The object which is the execution context of the running code, represented by 'this' keyword."
 			expect(correct).toBe(true)
 		})
 		

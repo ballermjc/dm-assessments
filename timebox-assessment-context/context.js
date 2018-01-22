@@ -1,20 +1,11 @@
-//Context	
-//this keyword - done
-//.bind	- done
-//implicit - done	
-//default	-- done
-//new																		
-//.apply	-- done
-//.call	-- done	
-
 //+++++++++ Start Here! All problems are below. +++++++++//
 
 ///////////////////Problem 1//////////////////
 //What is context? Uncomment the best answer.
 
-// var context = "The file which 'owns' the current code, represented by 'context' keyword."
-var context = "The object which 'owns' the current code, represented by 'this' keyword."
-// var context = "The function which 'owns' the current code, represented by 'this' keyword."
+// var context = "The file which is the execution context of the running code, represented by 'context' keyword."
+var context = "The object which is the execution context of the running code, represented by 'this' keyword."
+// var context = "The function which is the execution context of the running code, represented by 'this' keyword."
 // var context = "The browser window, represented by 'context' keyword."
 // var context = "The html page where the script is running, represented by 'this' keyword."
 
@@ -39,7 +30,7 @@ var contextRubberDucks = "window"
 
 ///////////////////Problem 3//////////////////
 //Based on the following code, what is 'this' in the method
-//breakMetro when we call dc.breakMetro()?
+//breakMetro when we call dcMetro.breakMetro()?
 
 var dcMetro = {
   name: "Washington, D.C. Public Transit",
