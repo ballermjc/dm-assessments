@@ -5,23 +5,6 @@ var testing = {
     c: hello ? true : false,
 }
 //============= CONTINUE BELOW =============//
-//Functions	
-//can declare	-- Done
-//can declare as expression	-- done
-//can invoke -- done 
-//can pass in parameters -- done	
-//can receive arguments	-- done
-//arguments -- done
-//keywords -- done
-//knows difference between params & args -- done
-//return	-- done
-//es6 function	-- done													
-
-//Functions Cont	
-//hoisting -- done	
-//return ends a function -- done	
-//nested functions --		done		
-
 //+++++++++ Start Here! All problems are below. +++++++++//
 
 ///////////////////Problem 1//////////////////
@@ -77,7 +60,7 @@ var funTimes = fun("Yay")
 
 function climb(){
   //What is the arguments variable? Try calling climb
-  //and passing in "Emily", true and see what is logged
+  //and passing in ("Ellie", true) and see what is logged
   //to the console.
   console.log('function climb\'s local arguments var - ', arguments)
 
