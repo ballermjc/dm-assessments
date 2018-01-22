@@ -141,71 +141,82 @@ describe('constructors-and-prototypes', function () {
 
 	/////////////////////DAN///////////////////////
 
-	describe('Problem 5 - travel ', function () {
+	describe('Problem 5 - String Prototype Reverse ', function () {
+	
+		var string1 = 'Hello my name is what?'
+		var reversed1 = '?tahw si eman ym olleH'
+
+		var string2 = 'My name is who?'
+		var reversed2 = '?ohw si eman yM'
+		
+		var string3 = 'My name is Slim Shady?'
+		var reversed3 = '?ydahS milS si eman yM'
+
 		it('should exist', function () {
-			expect(travel).toBeDefined()
+			expect(string1.reverse).toBeDefined()
 		})
 		it('should be a function', function () {
-			expect(typeof travel).toBe('function')
+			expect(typeof string1.reverse).toBe('function')
 		})
-		it('should return a function', function () {
-			var toLondon = travel("London", "plane")
-			expect(typeof toLondon).toBe('function')
+		it('should return a string', function () {
+			expect(typeof string1.reverse()).toBe('string')
 		})
-		it('should return a function, which itself returns "Salt Lake City to London, plane", when passed "London", "plane"', function () {
-			var toLondon = travel("London", "plane")
-			expect(toLondon()).toEqual('Salt Lake City to London, plane')
+		
+		it('should work on sample text', function () {
+			expect(string1.reverse()).toBe(reversed1)
+			expect(string2.reverse()).toBe(reversed2)
+			expect(string3.reverse()).toBe(reversed3)
 		})
-		it('should work as required', function () {
-			var toHawaii = travel("Hawaii", "plane")
-			var going = toHawaii()
-			var correct = going === 'Salt Lake City to Hawaii, plane' && typeof toHawaii === 'function'
-			expect(correct).toBe(true)
+		it('should work on random text', function () {
+			var text, reversedText, randomLength;
+			for(let t = 0; t < 5; t++){
+				text = ''
+				reversedText = ''
+				randomLength = Math.floor(Math.random() * 20) + 10;
+				var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789?!., '";
+
+  				for (var i = 0, char; i < randomLength; i++){
+					char = possible.charAt(Math.floor(Math.random() * possible.length));
+					text += char;
+					reversedText = char += reversedText;
+				}
+	
+				expect(text.reverse()).toBe(reversedText)
+			}
+			
 		})
 	})
 
 	describe('Problem 6 - ', function () {
-		it('adventureReturns should be correct', function () {
-			var correct = adventureReturns === "function"
-			expect(correct).toBe(true)
-		})
-		it('originIsPublic should be correct', function () {
-			var correct = originIsPublic === false
-			expect(correct).toBe(true)
-		})
-		it('functionIsPublic should be correct', function () {
-			var correct = functionIsPublic === true
-			expect(correct).toBe(true)
-		})
-		it('functionCanStillAccess should be correct', function () {
-			var correct = functionCanStillAccess === true
-			expect(correct).toBe(true)
-		})
-	})
+		var james = new Person('James', 30);
 
-	describe('Problem 7 - ', function () {
-		it('annePromotion should be a function', function () {
-			expect(typeof annePromotion).toEqual('function')
+		it('drinkCoffe should be a function', function () {
+			expect(typeof james.drinkCoffee).toEqual('function')
 		})
-		it('anneResumeEntry1 should be correct', function () {
-			var correct = anneResumeEntry1 === "Anne now works as a Queen in London"
-			expect(correct).toBe(true)
+		it('readDocumentation should be a function', function () {
+			expect(typeof james.readDocumentation).toEqual('function')
 		})
-		it('anneResumeEntry2 should be correct', function () {
-			var correct = anneResumeEntry2 === "Anne now works as a Lady-In-Waiting in Tower of London dungeons"
-			expect(correct).toBe(true)
+		it(' drinkCoffe should return a object', function () {
+			expect(typeof james.drinkCoffee()).toBe('object')
 		})
-		it('annesJobInDungeon should be correct', function () {
-			var correct = annesJobInDungeon === "Lady-In-Waiting"
-			expect(correct).toBe(true)
+		it('readDocumentation should return a object', function () {
+			expect(typeof james.readDocumentation()).toBe('object')
 		})
-
-		it('claraPromotion should be a function', function () {
-			expect(typeof claraPromotion).toEqual('function')
+		it('readDocumentaion should behave correctly', function () {
+			james.readDocumentation();
+			expect(james.age).toBe(30)
+			expect(james.name).toBe('James')
+			expect(james.energy).toBe(20)
+			expect(james.linesOfCode).toBe(-10)
+			expect(james.qualityOfCode).toBe(10)
 		})
-		it('claraResumeEntry should be a function', function () {
-			var correct = claraResumeEntry === "Clara now works as a programmer in Seattle"
-			expect(correct).toBe(true)
+		it('drinkCoffee should behave correctly', function () {
+			james.drinkCoffee();
+			expect(james.age).toBe(30)
+			expect(james.name).toBe('James')
+			expect(james.energy).toBe(30)
+			expect(james.linesOfCode).toBe(40)
+			expect(james.qualityOfCode).toBe(9)
 		})
 	})
 
