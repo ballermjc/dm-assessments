@@ -221,6 +221,7 @@ String.prototype.reverse = function(){
 
 // drinkCoffee should increase energy by 10, increase linesOfCode by 50, and decrease quality of code by 1, and returns Person object.
 // readDocumentation should decrease energy by 20, decrease linesOfCode by 30, and increase quality of code by 3, and returns Person object.
+
 function Person(name, age) {
   this.name = name;
   this.age = age;
@@ -243,13 +244,3 @@ Person.prototype.readDocumentation = function(){
   return this;
 }
 
-
-//////////////////PROBLEM 7////////////////////
-
-//uncomment the correct anwser:
-
-
-
-// Which has better memory performance?
-
-// va
