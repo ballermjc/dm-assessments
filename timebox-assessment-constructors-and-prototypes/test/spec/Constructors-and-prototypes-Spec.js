@@ -1,31 +1,8 @@
-/////////////////////MEGAN///////////////////////
-
-//Helper Functions
-function arrayIncludes(arr, values){
-	let allGood = true;
-	for(let i = 0; i < values.length; i++){
-		if(!arr.includes(values[i])){
-			allGood = false
-			break
-		}
-	}
-	return allGood
-}
-function arrayDoesNotInclude(arr, values){
-	let notGood = false;
-	for(let i = 0; i < values.length; i++){
-		if(arr.includes(values[i])){
-			notGood = true
-			break
-		}
-	}
-	return notGood
-}
 
 //Test Suite
 describe('constructors-and-prototypes', function () {
 
-	describe('Problem .5 - ', function () {
+	describe('Problem 1 - ', function () {
 		var seshat = new EgyptianGoddesses('Seshat', 'Written Word', 'Clever and Logical', 'Not in touch with her emotions')
 		var nephthys = new EgyptianGoddesses('Nephthys', 'Death', 'Protective', 'Misunderstood')
 		it('should be a constructor function', function(){
@@ -45,7 +22,7 @@ describe('constructors-and-prototypes', function () {
 		})
 	})
 	
-	describe('Problem 1 - ', function() {
+	describe('Problem 2 - ', function() {
 		var larry = new TestScores('Larry', 80)
 		var peggy = new TestScores('Peggy', 90)
 	    it('should be a constructor function', function(){
@@ -60,7 +37,7 @@ describe('constructors-and-prototypes', function () {
 		})
 	})
 
-	describe('Problem 2 - ', function () {
+	describe('Problem 3 - ', function () {
 		var fred = new Caveman('Fred', 45, 'stick')
 		var pebbles = new Caveman('Pebbles', 23, 'club')
 	    it('should be a constructor function', function(){
@@ -85,8 +62,8 @@ describe('constructors-and-prototypes', function () {
 	})
 
 
-	/////////////////////JAMES///////////////////////
-	describe('Problem 3 - ', function(){
+
+	describe('Problem 4 - ', function(){
 		it('Shape should exist', function(){
 			expect(Shape).toBeDefined()
 		})
@@ -125,7 +102,7 @@ describe('constructors-and-prototypes', function () {
 	
 
 
-	describe('Problem 4 - ', function () {
+	describe('Problem 5 - ', function () {
 		
 		it('Cohort should exist', function(){
 			expect(Cohort).toBeDefined()
@@ -156,9 +133,8 @@ describe('constructors-and-prototypes', function () {
 	})
 	
 
-	/////////////////////DAN///////////////////////
 
-	describe('Problem 5 - String Prototype Reverse ', function () {
+	describe('Problem 6 - String Prototype Reverse ', function () {
 	
 		var string1 = 'Hello my name is what?'
 		var reversed1 = '?tahw si eman ym olleH'
@@ -204,7 +180,7 @@ describe('constructors-and-prototypes', function () {
 		})
 	})
 
-	describe('Problem 6 - ', function () {
+	describe('Problem 7 - ', function () {
 		var james = new Person('James', 30);
 
 		it('drinkCoffe should be a function', function () {
