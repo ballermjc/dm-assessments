@@ -1,100 +1,69 @@
-/////////////////////MEGAN///////////////////////
-
-//Helper Functions
-function arrayIncludes(arr, values){
-	let allGood = true;
-	for(let i = 0; i < values.length; i++){
-		if(!arr.includes(values[i])){
-			allGood = false
-			break
-		}
-	}
-	return allGood
-}
-function arrayDoesNotInclude(arr, values){
-	let notGood = false;
-	for(let i = 0; i < values.length; i++){
-		if(arr.includes(values[i])){
-			notGood = true
-			break
-		}
-	}
-	return notGood
-}
 
 //Test Suite
-describe('scope-closures', function () {
-
+describe('constructors-and-prototypes', function () {
 
 	describe('Problem 1 - ', function () {
-		it('answerOne should exist', function () {
-			expect(answerOne).toBeDefined();
+		var seshat = new EgyptianGoddesses('Seshat', 'Written Word', 'Clever and Logical', 'Not in touch with her emotions')
+		var nephthys = new EgyptianGoddesses('Nephthys', 'Death', 'Protective', 'Misunderstood')
+		it('should be a constructor function', function(){
+			expect(new EgyptianGoddesses).toEqual(jasmine.any(Object));
 		})
-		it('answerOne should be correct', function () {
-			let correct = answerOne === 'window'
-			expect(correct).toBe(true);
+		it('should have the correct name, oversees, strength and weakness properties', function() {
+			expect(seshat.name).toBeDefined()
+			expect(seshat.oversees).toBeDefined()
+			expect(seshat.strength).toBeDefined()
+			expect(seshat.weakness).toBeDefined()
 		})
-
-		it('answerTwo should exist', function () {
-			expect(answerTwo).toBeDefined();
+		it('Maat should exist and have the correct properties and values', function() {
+			expect(maat).toBeDefined()
+			expect(maat.oversees).toBe('Truth and Justice')
+			expect(maat.strength).toBe('Balancing and Just')
+			expect(maat.weakness).toBe('Exacting in her standards')
 		})
-		it('answerTwo should be correct', function () {
-			let correct = answerTwo === 'window'
-			expect(correct).toBe(true);
+	})
+	
+	describe('Problem 2 - ', function() {
+		var larry = new TestScores('Larry', 80)
+		var peggy = new TestScores('Peggy', 90)
+	    it('should be a constructor function', function(){
+			expect(new TestScores).toEqual(jasmine.any(Object));
 		})
-
-		it('answerThree should exist', function () {
-			expect(answerThree).toBeDefined();
+		it('should have the correct name and percent property and value', function() {
+			expect(larry.name).toBe('Larry')
+			expect(peggy.percent).toBe(90)
 		})
-		it('answerThree should be correct', function () {
-			let correct = answerThree === 'window'
-			expect(correct).toBe(true);
-		})
-
-		it('answerFour should exist', function () {
-			expect(answerFour).toBeDefined();
-		})
-		it('answerFour should be correct', function () {
-			let correct = answerFour === 'myObj.methods'
-			expect(correct).toBe(true);
+		it('Suzy should exist', function() {
+			expect(suzy).toBeDefined()
 		})
 	})
 
-	describe('Problem 2 - ', function () {
-		var greekGlobalScopeCorrect = ["hades"]
-		var greekPantheonScopeCorrect = ["hades", "zeus", "olympians", "hera"]
-		var greekPantheonLoopScopeCorrect = ["hades", "zeus", "olympians", "hera"]
-		var greekUnderworldScopeCorrect = ["hades", "gatekeeper", "persephone"]
-		var greekUnderworldIfStatementScopeCorrect = ["hades", "gatekeeper", "persephone"]
-		it('greekGlobalScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekGlobalScope, greekGlobalScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekGlobalScope, ["zeus", "olympians", "hera", "gatekeeper", "response", "persephone"])
-			expect(correct && !incorrect).toBe(true)
+	describe('Problem 3 - ', function () {
+		var fred = new Caveman('Fred', 45, 'stick')
+		var pebbles = new Caveman('Pebbles', 23, 'club')
+	    it('should be a constructor function', function(){
+			expect(new Caveman).toEqual(jasmine.any(Object));
 		})
-		it('greekPantheonScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekPantheonScope, greekPantheonScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekPantheonScope, ["gatekeeper", "response", "persephone"])
-			expect(correct && !incorrect).toBe(true)
+		it('caveman should have name, age, and weapon properties', function() {
+			expect(fred.weapon).toBe('stick')
+			expect(fred.name).toBe('Fred')
+			expect(fred.age).toBe(45)
 		})
-		it('greekPantheonLoopScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekPantheonLoopScope, greekPantheonLoopScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekPantheonLoopScope, ["gatekeeper", "response", "persephone"])
-			expect(correct && !incorrect).toBe(true)
+		it('health and energy should each exist and equal 100', function() {
+			expect(fred.health).toBe(100)
+			expect(pebbles.energy).toBe(100)
 		})
-		it('greekUnderworldScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekUnderworldScope, greekUnderworldScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekUnderworldScope, ["zeus", "olympians", "hera"])
-			expect(correct && !incorrect).toBe(true)
+		it('Larry should exist with the given name, age, and weapon', function() {
+			expect(larry).toBeDefined()
+			expect(larry.name).toBe('Larry')
+			expect(larry.age).toBe(25)
+			expect(larry.weapon).toBe('rock')
 		})
-		it('greekUnderworldIfStatementScope should contain the correct variables', function () {
-			var correct = arrayIncludes(greekUnderworldIfStatementScope, greekUnderworldIfStatementScopeCorrect)
-			var incorrect = arrayDoesNotInclude(greekUnderworldIfStatementScope, ["zeus", "olympians", "hera"])
-			expect(correct && !incorrect).toBe(true)
-		})
+
 	})
 
-	/////////////////////JAMES///////////////////////
-	describe('Problem 3 - ', function(){
+
+
+	describe('Problem 4 - ', function(){
 		it('Shape should exist', function(){
 			expect(Shape).toBeDefined()
 		})
@@ -133,7 +102,7 @@ describe('scope-closures', function () {
 	
 
 
-	describe('Problem 4 - ', function () {
+	describe('Problem 5 - ', function () {
 		
 		it('Cohort should exist', function(){
 			expect(Cohort).toBeDefined()
@@ -164,9 +133,8 @@ describe('scope-closures', function () {
 	})
 	
 
-	/////////////////////DAN///////////////////////
 
-	describe('Problem 5 - String Prototype Reverse ', function () {
+	describe('Problem 6 - String Prototype Reverse ', function () {
 	
 		var string1 = 'Hello my name is what?'
 		var reversed1 = '?tahw si eman ym olleH'
@@ -212,7 +180,7 @@ describe('scope-closures', function () {
 		})
 	})
 
-	describe('Problem 6 - ', function () {
+	describe('Problem 7 - ', function () {
 		var james = new Person('James', 30);
 
 		it('drinkCoffe should be a function', function () {
