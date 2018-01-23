@@ -114,58 +114,75 @@ describe('constructors-and-prototypes', function () {
 	})
 
 	/////////////////////JAMES///////////////////////
+	describe('Problem 3 - ', function(){
+		it('Shape should exist', function(){
+			expect(Shape).toBeDefined()
+		})
+		it('Shape should be a class', function(){
+			expect(typeof Shape).toBe("function")
+		})
+		it('Shape class should properly set the number of sides passed in', function(){
+			let threeSideTest = new Shape(3)
+			expect(threeSideTest.sides).toEqual(3)
+		})
+		it('triangle should exist', function(){
+			expect(triangle).toBeDefined()
+		})
+		it('triangle should have been created from Shape class', function(){
+			expect(triangle instanceof Shape).toEqual(true)
+		})
+		it('square should exist', function(){
+			expect(square).toBeDefined()
+		})
+		it('square should have been created from Shape class', function(){
+			expect(square instanceof Shape).toEqual(true)
+		})
+		it('pentagon should exist', function(){
+			expect(pentagon).toBeDefined()
+		})
+		it('pentagon should have been created from Shape class', function(){
+			expect(pentagon instanceof Shape).toEqual(true)
+		})
+		it('each shape should have correct number of sides', function(){
+			expect(triangle.sides).toBe(3)
+			expect(square.sides).toBe(4)
+			expect(pentagon.sides).toBe(5)
+		})
 
-	describe('Problem 3 - ', function () {
-		var norseGlobalScopeCorrect = ["hela"]
-		var norsePantheonScopeCorrect = ["hela", "odin"]
-		var norsePantheonLoopScopeCorrect = ["hela", "odin", "asgardians", "frigga"]
-		var valhallaScopeCorrect = ["hela", "watcher", "response"]
-		var valhallaIfStatementScopeCorrect = ["hela", "watcher", "response", "valkyrie"]
-		it('norseGlobalScope should contain the correct variables', function () {
-			var correct = arrayIncludes(norseGlobalScope, norseGlobalScopeCorrect)
-			var incorrect = arrayDoesNotInclude(norseGlobalScope, ["odin", "asgardians", "frigga", "watcher", "response", "valkyrie"])
-			expect(correct && !incorrect).toBe(true)
-		})
-		it('norsePantheonScope should contain the correct variables', function () {
-			var correct = arrayIncludes(norsePantheonScope, norsePantheonScopeCorrect)
-			var incorrect = arrayDoesNotInclude(norsePantheonScope, ["asgardians", "frigga", "watcher", "response", "valkyrie"])
-			expect(correct && !incorrect).toBe(true)
-		})
-		it('norsePantheonLoopScope should contain the correct variables', function () {
-			var correct = arrayIncludes(norsePantheonLoopScope, norsePantheonLoopScopeCorrect)
-			var incorrect = arrayDoesNotInclude(norsePantheonLoopScope, ["watcher", "response", "valkyrie"])
-			expect(correct && !incorrect).toBe(true)
-		})
-		it('valhallaScope should contain the correct variables', function () {
-			var correct = arrayIncludes(valhallaScope, valhallaScopeCorrect)
-			var incorrect = arrayDoesNotInclude(valhallaScope, ["odin", "asgardians", "frigga", "valkyrie"])
-			expect(correct && !incorrect).toBe(true)
-		})
-		it('valhallaIfStatementScope should contain the correct variables', function () {
-			var correct = arrayIncludes(valhallaIfStatementScope, valhallaIfStatementScopeCorrect)
-			var incorrect = arrayDoesNotInclude(valhallaIfStatementScope, ["odin", "asgardians", "frigga"])
-			expect(correct && !incorrect).toBe(true)
-		})
 	})
+	
+
 
 	describe('Problem 4 - ', function () {
-		it('seattleWeather should be correct', function () {
-			var correct = seattleWeather === "The sky is purple and it is stormy."
+		
+		it('Cohort should exist', function(){
+			expect(Cohort).toBeDefined()
+		})
+		it('Cohort should be a function', function(){
+			expect(typeof Cohort).toBe("function")
+		})
+		it('Variable cohort1 should exist', function(){
+			expect(cohort1).toBeDefined()
+		})
+		it('Variable cohort2 should exist', function(){
+			expect(cohort2).toBeDefined()
+		})
+		it('cohort1 should have at least 3 student names', function(){
+			let correct = cohort1.students.length > 2 ? true : false
 			expect(correct).toBe(true)
 		})
-		it('vancouverWeather should be correct', function () {
-			var correct = vancouverWeather === "The sky is grey and it is foggy."
+		it('cohort2 should have at least the 4 student names supplied', function(){
+			let correct = cohort2.students.includes("Brendan Eich", "Dan Abramov", "Wes Bos", "Kent Dodds") ? true : false
 			expect(correct).toBe(true)
 		})
-		it('denverWeather should be correct', function () {
-			var correct = denverWeather === "The sky is grey and it is foggy."
-			expect(correct).toBe(true)
+		it('cohort1.sayName() should produce the proper result', function(){
+			expect(cohort1.sayName()).toEqual("This cohort is called wpr27")
 		})
-		it('denverWeather2 should be correct', function () {
-			var correct = denverWeather2 === "The sky is blue and it is sunny."
-			expect(correct).toBe(true)
+		it('cohort2.takeAttendance() should produce the proper result', function(){
+			expect(cohort2.takeAttendance()).toBe(console.log("This cohort is called wpr31"))
 		})
 	})
+	
 
 	/////////////////////DAN///////////////////////
 
