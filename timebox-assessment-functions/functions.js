@@ -17,15 +17,15 @@ function hey(name){
 
 ///////////////////Problem 2//////////////////
 //Create a function called hi, using a function
-//declaration. hi should take in a name, and return
+//expression. hi should take in a name, and return
 //the string "Hi " plus the name parameter.
 var hi = function(name){
   return "Hi " + name
 }
 
 ///////////////////Problem 3//////////////////
-//Create a function called hello, using a function
-//declaration. hello should take in a name, and return
+//Create a function called hello, using an arrow
+//function. hello should take in a name, and return
 //the string "Hello " plus the name parameter.
 var hello = (name) => "Hello " + name
 
@@ -33,7 +33,7 @@ var hello = (name) => "Hello " + name
 ///////////////////Problem 4//////////////////
 //Create a function named fun, which takes in
 //a single string parameter, and returns that string
-// with "!!!!!" added to the end of it. Then, call fun 
+//with "!!!!!" added to the end of it. Then, call fun 
 //with the string "Yay" and save the result to a 
 //variable called funTimes.
 function fun(what){
@@ -104,19 +104,19 @@ argsVsParams(2, 3, num)
 
 //What is z?
 // var z = "argument"
-// var z = "let"
+// var z = "function"
 // var z = "parameter"
 var z = "variable"
 
 //What is a?
 // var a = "argument"
-// var a = "let"
+// var a = "function"
 var a = "parameter"
 // var a = "variable"
 
 //What is c?
 // var c = "argument"
-// var c = "let"
+// var c = "function"
 var c = "parameter"
 // var c = "variable"
 
@@ -199,9 +199,8 @@ var answer5 = ["funcA"]
 //create a function called left, which returns the string
 //"Looking backwards". Also inside the function janus,
 //create a function called right, which returns the string,
-//"Looking forwards".
-//If the check if the parameter is true. If true, 
-//return the function right; otherwise, return left.
+//"Looking forwards". If the parameter is true, return 
+//the function right, otherwise, return left.
 
 function janus(thisWay){
   function left(){
