@@ -117,12 +117,12 @@ var arrayLength = rubberDucks.length
 //////////////////PROBLEM 9////////////////////
 
 //Create a function called changeName that takes in an array
-//and finds the element "Tolkn", and changes it to "Tolkein".
+//and finds the element "Tolkn", and changes it to "Tolkien".
 //changeName should return the array.
 
   //Code here
   function changeName(arr){
-    arr[arr.indexOf('Tolkn')] = "Tolkein"
+    arr[arr.indexOf('Tolkn')] = "Tolkien"
     return arr
   }
 
