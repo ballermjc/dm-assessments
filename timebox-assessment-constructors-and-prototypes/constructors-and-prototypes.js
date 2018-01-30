@@ -41,7 +41,7 @@ function TestScores() {
 }
 
 
-// Now create a new TestScore with the about constructor function called 'suzy'. Suzy got 98 on the test. 
+//Now create a new TestScore with the above constructor function, and save it in a variable called suzy. Suzy got a 98 on the test.
 
 
 
