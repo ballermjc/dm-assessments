@@ -240,7 +240,9 @@ console.log("denver2", denver("blue", "sunny"))
 //////////////////PROBLEM 5////////////////////
 
 //Create a function called travel. It should take in 2 parameters,
-//destination and travelMode (both will be strings). Inside the //travel function, declare a variable called "origin" and assign //it the value "Salt Lake City".
+//destination and travelMode (both will be strings). Inside the 
+//travel function, declare a variable called "origin" and assign 
+//it the value "Salt Lake City".
 //Travel should return a function, which returns a string: 
 //origin + " to " + destination + ", " + travelMode
 
