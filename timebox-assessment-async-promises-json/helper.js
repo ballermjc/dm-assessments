@@ -4,7 +4,7 @@ function helper(){
 }
 
 var sunlight = false
-var goodnight = new Promise((resolve, reject) => {
+var goodNight = new Promise((resolve, reject) => {
     if(!sunlight){
         resolve("Goodnight.")
     } else {
@@ -21,7 +21,7 @@ var goodDay = new Promise((resolve, reject) => {
     }
 })
 
-let user = { name: "Thor", img: "http://media.comicbook.com/2017/10/thor-ragnarok-smiling-1039609.jpg", city: "Asgard", job: "God of Thunder", valid: true}
+let user = { name: "Thor", img: "http://media.comicbook.com/2017/10/thor-ragnarok-smiling-1039609.jpg", city: "Asgard", job: "God of Thunder", valid: false}
 var getUser = new Promise((res, rej) => {
     if(user.valid) res(user)
     

@@ -26,7 +26,7 @@ function arrayDoesNotInclude(arr, values){
 describe('async-promises-json', function () {
 
 	describe('Problem 1 - JSON', function () {
-		it('correctJSON should be correct', function () {
+		it('The correct version of the variable correctJSON should be uncommented', function () {
 			let correct = JSON.stringify(correctJSON).includes('"snow"') && 
 							!JSON.stringify(correctJSON).includes('"white",')
 			expect(correct).toBe(true)
@@ -35,13 +35,13 @@ describe('async-promises-json', function () {
 	})
 
 	describe('Problem 2 - valid JSON', function () {
-		it('invalidJSONLineNumbers should be correct', function () {
+		it('The array invalidJSONLineNumbers should contain the correct line numbers', function () {
 			let correct = arrayIncludes(invalidJSONLineNumbers, [3, 5, 6, 7]) && !arrayDoesNotInclude(invalidJSONLineNumbers, [1, 2, 4, 8])
 			expect(correct).toBe(true)
 		})
 
-		it('badJSON should be correct', function () {
-			let correct = arrayIncludes(badJSON, ["no quotes on keys", "trailing commas"]) && badJSON.length === 2
+		it('The array badJSON should contain common JSON formatting errors', function () {
+			let correct = arrayIncludes(badJSON, ["using single quotes", "no quotes on keys", "trailing commas", "missing commas"]) && badJSON.length === 4
 			expect(correct).toBe(true)
 		})
 	})
@@ -61,38 +61,38 @@ describe('async-promises-json', function () {
 	})
 
 	describe('Problem 4 - findAtlantis', function () {
-		//This is an example set of cities that w
-		var lostCities = {
-			camelot: "Cornwall or Wales",
-			troy: "western shores of Turkey",
-			shangrila: "Himalayas",
-			elDorado: "southwestern USA"
+		var lostCity = {
+			name: 'New York City',
+			location: 'New York State'
 		}
 		it('should be a promise', function () {
-			let findAtlantis = lostCityFinder(lostCities)
+			let findAtlantis = lostCityFinder(lostCity)
 			let correct = findAtlantis.constructor.toString().includes("Promise")
 			expect(correct).toEqual(true)
 		})
-		it('should resolve to give value "Can\'t find Atlantis!" if lostCities.atlantis is falsy', function (done) {
-			let findAtlantis = lostCityFinder(lostCities)			
+		it('should reject with the reason "Can\'t find Atlantis!" if lostCity.location is not equal to "under the sea"', function (done) {
+			let findAtlantis = lostCityFinder(lostCity)			
 			findAtlantis.catch(reason => {
 				expect(reason).toEqual('Can\'t find Atlantis!');
 				done()
 			})
 		})
-		it('should resolve to give value of atlantis if lostCities.atlantis is truthy', function (done) {
-			let lostCities = {atlantis: "Under the sea"}
-			let findAtlantis = lostCityFinder(lostCities)
+		it('should resolve to give value of "Atlantis" if lostCity.location is equal to "under the sea"', function (done) {
+			let lostCity = {
+				name: 'Atlantis',
+				location: 'under the sea'
+			}
+			let findAtlantis = lostCityFinder(lostCity)
 			findAtlantis.then(res => {
-				expect(res).toEqual('Under the sea');
+				expect(res).toEqual('Atlantis');
 				done()
 			})
 		})
 		
 	})
 
-	describe('Problem 5 - goodnight', function () {
-		it('should set night to it\'s response if resolved', function () {
+	describe('Problem 5 - goodNight', function () {
+		it('should set night to the promise\'s response if resolved', function () {
 			let correct = night === "Goodnight."
 			expect(correct).toEqual(true)
 		})
@@ -100,23 +100,13 @@ describe('async-promises-json', function () {
 	})
 
 	describe('Problem 6 - goodDay', function () {
-		it('should set stillNight to it\'s reason for rejection, if rejected', function () {
-			let correct = stillNight === "The sun is still up!"
+		it('should set err to the promise\'s reason for rejection, if rejected', function () {
+			let correct = err === "The sun is still up!"
 			expect(correct).toEqual(true)
 		})
 		
 	})
 
-	describe('Problem 7 - isValid', function () {
-		it('should be correct', function () {
-			let correct = isValid
-			if(correct){
-				alert("Yep! You can chain promises with .then and .catch, each of which return a promise themselves.")
-			}
-			expect(correct).toEqual(true)
-		})
-		
-	})
 
 	
 })
