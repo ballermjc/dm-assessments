@@ -1,7 +1,5 @@
 ///////////////////Problem 1///////////////////
 //Given the object below, uncomment the line with the correct usage:
-//1. Using dot notation to access the duck's "name" property.
-//2. Using bracket notation to access duck's "bites" property.
 
 var duck = {
   name: "Stefan",
@@ -10,10 +8,12 @@ var duck = {
   fluffiness: 100
 }
 
+//1. Using dot notation to access the duck's "name" property.
 // var accessByDotNotation = duck."name"
 // var accessByDotNotation = Object[duck].name
 var accessByDotNotation = duck.name
 
+//2. Using bracket notation to access duck's "bites" property.
 // var accessByBracketNotation = duck{"bites"}
 // var accessByBracketNotation = Object[duck][bites]
 // var accessByBracketNotation = duck[bites]
@@ -39,24 +39,32 @@ person.moveCities = function(newCity){
 
 
 ///////////////////Problem 3///////////////////
-//Create a function called propertyAccessor. propertyAccessor should take
+//Create a function called keyAccessor. keyAccessor should take
 //in two parameters: an array of people, and an object.
 //Each person's name is also a property on an object.
-//propertyAccessor should loop through the array of names, and 
+//keyAccessor should loop through the array of names, and 
 //access corresponding values for each name in the object, 
 //pushing the values into an empty array. 
-//propertyAccessor should return the new array.
+//keyAccessor should return the new array.
 
 //Example set of names that could be passed in
-var names = ["anne", "brandon", "charles", "diana"]
+var names = ["Dan", "Todd", "Andrew", "Doug"]
 
 //Example object that could be passed in
 var people = {
-  anne: { city: "New York", age: 23 },
-  brandon: { city: "London", age: 28 },
-  charles: { city: "Seattle", age: 33 },
-  diana: { city: "Los Angeles", age: 20 },
+  Dan: { city: "Las Vegas", age: 24 },
+  Todd: { city: "France", age: 28 },
+  Andrew: { city: "Portland", age: 12 },
+  Doug: { city: "New New York", age: 56 },
 }
+
+//Example new array that would be returned
+var sampleOutput = [
+  { city: "Las Vegas", age: 24 },
+  { city: "France", age: 28 },
+  { city: "Portland", age: 12 },
+  { city: "New New York", age: 56 }
+]
 
 //CODE HERE
 function keyAccessor(arr, obj){
