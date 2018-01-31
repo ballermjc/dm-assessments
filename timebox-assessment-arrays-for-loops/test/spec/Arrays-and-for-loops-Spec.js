@@ -171,23 +171,23 @@ describe('arrays-and-for-loops', function () {
 		it('should exist', function () {
 			expect(changeName).toBeDefined();
 		})
-		it('should find return ["Rowling", "Sanderson", "Tolkein", "Lewis"] if passed ["Rowling", "Sanderson", "Tolkn", "Lewis"]', function () {
+		it('should find return ["Rowling", "Sanderson", "Tolkien", "Lewis"] if passed ["Rowling", "Sanderson", "Tolkn", "Lewis"]', function () {
 			var arr = ["Rowling", "Sanderson", "Tolkn", "Lewis"]
-			var shouldBe = ["Rowling", "Sanderson", "Tolkein", "Lewis"]
+			var shouldBe = ["Rowling", "Sanderson", "Tolkien", "Lewis"]
 			var newArr = changeName(arr)
 			let correct = JSON.stringify(newArr) === JSON.stringify(arr)
 			expect(correct).toEqual(true);
 		})
-		it('should find "Tolkn" and change to "Tolkein"', function () {
+		it('should find "Tolkn" and change to "Tolkien"', function () {
 			var arr = [1, "Tolkn", 3]
-			var shouldBe = [1, "Tolkein", 3]
+			var shouldBe = [1, "Tolkien", 3]
 			var newArr = changeName(arr)
 			let correct = newArr[1] === shouldBe[1]
 			expect(correct).toEqual(true);
 		})
 		it('should only modify the element "Tolkn"', function () {
 			var arr = [1, "Tolkn", 3]
-			var shouldBe = [1, "Tolkein", 3]
+			var shouldBe = [1, "Tolkien", 3]
 			var newArr = changeName(arr)
 			let correct = newArr[0] === 1 && newArr[2] === 3
 			expect(correct).toBe(true);

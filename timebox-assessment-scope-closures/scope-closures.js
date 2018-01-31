@@ -3,11 +3,11 @@
 
 //////////////////PROBLEM 1////////////////////
 
-//Based on the following set of functions, what
-//is "this" in each of the following functions?
-//Uncomment the correct answer.
+//Based on the following set of functions, what is 
+//"this"? Uncomment the correct answer.
 
 var functionOne = () => console.log('functionOne', this)
+
 //What is "this" in functionOne?
 
 var answerOne = "window"
@@ -18,6 +18,7 @@ var answerOne = "window"
 function functionTwo() {
   console.log('functionTwo', this)
 }
+
 //What is "this" in functionTwo?
 
 var answerTwo = "window"
@@ -52,7 +53,7 @@ var answerFour = "myObj.methods"
 //////////////////PROBLEM 2////////////////////
 
 //Based on the following set of functions, alter
-//the following arrays to contain only the strings
+//the provided arrays to contain only the strings
 //that contain the names of the variables that are 
 //in scope for the following code.
 
@@ -239,9 +240,10 @@ console.log("denver2", denver("blue", "sunny"))
 //////////////////PROBLEM 5////////////////////
 
 //Create a function called travel. It should take in 2 parameters,
-//destination and travelMode (both will be strings). Inside, 
-//declare a variable called "origin" and assign it the value "Salt Lake City".
-//Travel should return a function, which itself returns a string: 
+//destination and travelMode (both will be strings). Inside the 
+//travel function, declare a variable called "origin" and assign 
+//it the value "Salt Lake City".
+//Travel should return a function, which returns a string: 
 //origin + " to " + destination + ", " + travelMode
 
 function travel(destination, travelMode) {
@@ -255,7 +257,7 @@ function travel(destination, travelMode) {
 //////////////////PROBLEM 6////////////////////
 
 //Based on the function below, answer the following
-//by uncommenting the correct answers
+//by uncommenting the correct answer for each question.
 
 function adventure(mode) {
   var origin = "Salt Lake City"
