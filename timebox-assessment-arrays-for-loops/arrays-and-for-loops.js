@@ -14,7 +14,7 @@
 
 //////////////////PROBLEM 2////////////////////
   
-//Uncomment the correct answers to the following:
+//Uncomment the correct answer to the following questions:
 
 //What is the first numbered index of an array?
 
@@ -183,7 +183,7 @@ var arrayLength = rubberDucks.length
 //Finish the function canYouHearMe. Assume that there is a function 
 //called hello. It takes no parameters. Inside canYouHearMe, make a 
 //for loop that concatenates param with the result of invoking the 
-//function hello, 10 times.
+//function hello, 10 times. canYouHearMe should return param.
 
   function canYouHearMe(param){
 
