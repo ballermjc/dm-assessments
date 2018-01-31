@@ -33,7 +33,7 @@ var arrayLength = rubberDucks.length
 
 //////////////////PROBLEM 3////////////////////
 
-//Create an function called getLast that takes in a single 
+//Create a function called getLast that takes in a single 
 //parameter: an array, and returns the last element of the array.
 //The passed-in array should NOT be modified.
 
@@ -47,7 +47,7 @@ var arrayLength = rubberDucks.length
 
 
 
-//Create an function called getElement that takes in two 
+//Create a function called getElement that takes in two 
 //parameters: an array, an index, and returns the element 
 //at the numbered index of that array.
 //The passed-in array should NOT be modified.
@@ -61,7 +61,7 @@ var arrayLength = rubberDucks.length
 
 //////////////////PROBLEM 5////////////////////
 
-//Create an function called changeElement that takes in three 
+//Create a function called changeElement that takes in three 
 //parameters: an array, an index, and a value. changeElement
 //should change the element at the numbered index of that array
 //to the given value. You do not need to return the array.
@@ -86,9 +86,9 @@ var arrayLength = rubberDucks.length
 //////////////////PROBLEM 7////////////////////
 
 //Create a function called addMoreDucks that takes in an array
-//and if the array's length is greater than 4, inserts the 
-//string '42 ducks' as the 3rd element of the array. addMoreDucks
-//should return the array.
+//and if the array's length is greater than 4, replace the
+//3rd element of the array with the string '42 ducks'. 
+//addMoreDucks should return the array.
 
   //Code here
   function addMoreDucks(arr){
