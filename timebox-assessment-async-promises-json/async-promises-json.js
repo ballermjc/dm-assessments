@@ -1,7 +1,6 @@
 //+++++++++ Start Here! All problems are below. +++++++++//
 
 ///////////////////Problem 1//////////////////
-//Answer the following questions.
 
 //Uncomment the example with correct JSON formatting
 // var correctJSON = { "sky": "blue", "earth": "red", "trees": "green", "snow": "white", }
