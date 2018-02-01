@@ -3,8 +3,8 @@
 
 //////////////////PROBLEM 1////////////////////
 
-//Based on the following set of functions, what is 
-//"this"? Uncomment the correct answer.
+//Based on the following set of functions, what is the value of
+//the "this" keyword? Uncomment the correct answer.
 
 var functionOne = () => console.log('functionOne', this)
 
@@ -35,7 +35,7 @@ var myObj = {
 }
 
 //What is "this" in functionThree?
-
+ 
 var answerThree = "window"
 //var answerThree = "myObj"
 //var answerThree = "myObj.methods"
