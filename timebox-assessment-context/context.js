@@ -162,7 +162,7 @@ var q1Context = "implicit"
 
 
 //Q2:
-//Call the function checkOut on book2, and save it to a 
+//Call the function checkOut on book2 using the .call method, and save it to a 
 //variable called book2CheckOut.
 
 //CODE HERE
