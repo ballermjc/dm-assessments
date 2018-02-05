@@ -9,24 +9,24 @@ var testing = {
 
 ///////////////////Problem 1//////////////////
 //Create a function called hey, using a function
-//declaration. hey should take in a name, and return
-//the string "Hey " plus the name parameter.
+//declaration. hey should take in a 'name' parameter, and return
+//the string "Hey " plus the name.
 function hey(name){
   return "Hey " + name
 }
 
 ///////////////////Problem 2//////////////////
 //Create a function called hi, using a function
-//expression. hi should take in a name, and return
-//the string "Hi " plus the name parameter.
+//expression (without ES6). hi should take in a 'name' parameter, and return
+//the string "Hi " plus the name.
 var hi = function(name){
   return "Hi " + name
 }
 
 ///////////////////Problem 3//////////////////
 //Create a function called hello, using an arrow
-//function. hello should take in a name, and return
-//the string "Hello " plus the name parameter.
+//function (use var). hello should take in a 'name' parameter, and return
+//the string "Hello " plus the name.
 var hello = (name) => "Hello " + name
 
 
@@ -34,7 +34,7 @@ var hello = (name) => "Hello " + name
 //Create a function named fun, which takes in
 //a single string parameter, and returns that string
 //with "!!!!!" added to the end of it. Then, call fun 
-//with the string "Yay" and save the result to a 
+//with the string "Yay" and save the result of the function to a 
 //variable called funTimes.
 function fun(what){
   return what + "!!!!!"
@@ -43,7 +43,7 @@ var funTimes = fun("Yay")
 
 
 ///////////////////Problem 5//////////////////
-//Finish the function climb below. Use the built-in local
+//Finish the function 'climb' below. Use the built-in local
 //variable arguments, within the function climb. 
 
 //Note: DO NOT alter the function climb to take in parameters.
@@ -82,7 +82,7 @@ function climb(){
 //called key. That function expression should
 //return the string "word". Then, return key.
 
-//note: key should not be an arrow function,
+//NOTE: key should not be an arrow function,
 //but a function expression saved to the variable key.
 
 function keyword(){
@@ -92,8 +92,8 @@ function keyword(){
 }
 
 ///////////////////Problem 7//////////////////
-//Answer the following questions, choosing the best 
-//answer for each based on the following code:
+//Answer the questions based on the following code:
+//NOTE: Un-comment the line that best fits.
 
 function argsVsParams(a, b, c){
   let z = 200
@@ -132,8 +132,8 @@ var seven = "argument"
 
 
 ///////////////////Problem 8//////////////////
-//Answer the following questions, choosing the best 
-//answer for each based on the following code:
+//Answer the questions based on the following code:
+//NOTE: Un-comment the line that best fits.
 
 function loopDeLoop(array){
   var finishedLoop = false
@@ -174,8 +174,7 @@ var answer4 = "No, by that line of code i is array.length."
 // var answer4 = "No, by that line of code i is 1 less than array.length."
 
 ///////////////////Problem 9//////////////////
-//Answer the following questions, uncommenting the 
-//best answer for each based on the following code:
+//Answer the question based on the following code:
 
 function funcA(){
   return 1
@@ -201,6 +200,8 @@ var answer5 = ["funcA"]
 //create a function called right, which returns the string,
 //"Looking forwards". If the parameter is true, return 
 //the function right, otherwise, return left.
+
+//NOTE: Don't invoke the functions that you return
 
 function janus(thisWay){
   function left(){
