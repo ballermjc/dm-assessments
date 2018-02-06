@@ -25,28 +25,7 @@ function arrayDoesNotInclude(arr, values){
 //Test Suite
 describe('async-promises-json', function () {
 
-	describe('Problem 1 - JSON', function () {
-		it('The correct version of the variable correctJSON should be uncommented', function () {
-			let correct = JSON.stringify(correctJSON).includes('"snow"') && 
-							!JSON.stringify(correctJSON).includes('"white",')
-			expect(correct).toBe(true)
-		})
-		
-	})
-
-	describe('Problem 2 - valid JSON', function () {
-		it('The array invalidJSONLineNumbers should contain the correct line numbers', function () {
-			let correct = arrayIncludes(invalidJSONLineNumbers, [3, 5, 6, 7]) && !arrayDoesNotInclude(invalidJSONLineNumbers, [1, 2, 4, 8])
-			expect(correct).toBe(true)
-		})
-
-		it('The array badJSON should contain common JSON formatting errors', function () {
-			let correct = arrayIncludes(badJSON, ["using single quotes", "no quotes on keys", "trailing commas", "missing commas"]) && badJSON.length === 4
-			expect(correct).toBe(true)
-		})
-	})
-
-	describe('Problem 3 - whereAreMyKeys', function () {
+	describe('Problem 1 - whereAreMyKeys', function () {
 		it('should be a promise', function () {
 			let correct = whereAreMyKeys.constructor.toString().includes("Promise")
 			expect(correct).toEqual(true)
@@ -60,7 +39,7 @@ describe('async-promises-json', function () {
 		})
 	})
 
-	describe('Problem 4 - findAtlantis', function () {
+	describe('Problem 2 - findAtlantis', function () {
 		var lostCity = {
 			name: 'New York City',
 			location: 'New York State'
@@ -91,7 +70,7 @@ describe('async-promises-json', function () {
 		
 	})
 
-	describe('Problem 5 - goodNight', function () {
+	describe('Problem 3 - goodNight', function () {
 		it('should set night to the promise\'s response if resolved', function () {
 			let correct = night === "Goodnight."
 			expect(correct).toEqual(true)
@@ -99,7 +78,7 @@ describe('async-promises-json', function () {
 		
 	})
 
-	describe('Problem 6 - goodDay', function () {
+	describe('Problem 4 - goodDay', function () {
 		it('should set err to the promise\'s reason for rejection, if rejected', function () {
 			let correct = err === "The sun is still up!"
 			expect(correct).toEqual(true)
