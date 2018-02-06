@@ -11,23 +11,24 @@ var testing = {
 //Create a function called hey, using a function
 //declaration. hey should take in a 'name' parameter, and return
 //the string "Hey " plus the name.
-function hey(name){
-  return "Hey " + name
-}
+
+//Code here
+
 
 ///////////////////Problem 2//////////////////
 //Create a function called hi, using a function
 //expression (without ES6). hi should take in a 'name' parameter, and return
 //the string "Hi " plus the name.
-var hi = function(name){
-  return "Hi " + name
-}
+
+//Code here
+
 
 ///////////////////Problem 3//////////////////
 //Create a function called hello, using an arrow
 //function (use var). hello should take in a 'name' parameter, and return
 //the string "Hello " plus the name.
-var hello = (name) => "Hello " + name
+
+//Code here
 
 
 ///////////////////Problem 4//////////////////
@@ -36,15 +37,16 @@ var hello = (name) => "Hello " + name
 //with "!!!!!" added to the end of it. Then, call fun 
 //with the string "Yay" and save the result of the function to a 
 //variable called funTimes.
-function fun(what){
-  return what + "!!!!!"
-}
-var funTimes = fun("Yay")
+
+//Code here
 
 
 ///////////////////Problem 5//////////////////
 //Finish the function 'climb' below. Use the built-in local
 //variable arguments, within the function climb. 
+
+//If you do not know what the arguments variable is,
+//check out: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 
 //Note: DO NOT alter the function climb to take in parameters.
 //The purpose of this exercise is to use the local arguments
@@ -65,15 +67,8 @@ function climb(){
   console.log('function climb\'s local arguments var - ', arguments)
 
   //CODE HERE - DO NOT TOUCH THE CODE ABOVE!
-  if(arguments[0] && typeof arguments[0] === 'string'){
-    if(arguments[1]){
-      return "Climbing!"
-    } else {
-      return "On belay?"
-    }
-  } else {
-    return "Let's set up the belay rope before we climb."
-  }
+  
+
 }
 
 ///////////////////Problem 6//////////////////
@@ -85,11 +80,8 @@ function climb(){
 //NOTE: key should not be an arrow function,
 //but a function expression saved to the variable key.
 
-function keyword(){
-  var key = function () { return "word" }
-  // var key =  () =>  word 
-  return key
-}
+//Code here
+
 
 ///////////////////Problem 7//////////////////
 //Answer the questions based on the following code:
@@ -106,27 +98,27 @@ argsVsParams(2, 3, num)
 // var z = "argument"
 // var z = "function"
 // var z = "parameter"
-var z = "variable"
+// var z = "variable"
 
 //What is a?
 // var a = "argument"
 // var a = "function"
-var a = "parameter"
+// var a = "parameter"
 // var a = "variable"
 
 //What is c?
 // var c = "argument"
 // var c = "function"
-var c = "parameter"
+// var c = "parameter"
 // var c = "variable"
 
 //What is 3?
-var three = "argument"
+// var three = "argument"
 // var three = "parameter"
 // var three = "variable"
 
 //What is num, when it is passed into the function?
-var seven = "argument"
+// var seven = "argument"
 // var seven = "parameter"
 // var seven = "variable"
 
@@ -152,25 +144,25 @@ function loopDeLoop(array){
 
 //What will be returned from loopDeLoop([1, 2, 3, 4])?
 // var answer1 = "Leaving early...at index 4"
-var answer1 = "Finished the loop."
+// var answer1 = "Finished the loop."
 // var answer1 = "Will I ever get used?"
 
 //What will be returned from loopDeLoop([1, "X", 3, 4])?
 // var answer2 = "Leaving early...at index 4"
-var answer2 = "Leaving early...at index 1"
+// var answer2 = "Leaving early...at index 1"
 // var answer2 = "Finished the loop."
 // var answer2 = "Will I ever get used?"
 
 //What will be returned from loopDeLoop(["X", 2, "X", 4])?
 // var answer3 = "Leaving early...at index 2"
-var answer3 = "Leaving early...at index 0"
+// var answer3 = "Leaving early...at index 0"
 // var answer3 = "Finished the loop."
 // var answer3 = "Will I ever get used?"
 
 //Will the else ever catch?
 // var answer4 = "Yes, if we finish the loop."
 // var answer4 = "Yes, if we don't finish the loop."
-var answer4 = "No, by that line of code i is array.length."
+// var answer4 = "No, by that line of code i is array.length."
 // var answer4 = "No, by that line of code i is 1 less than array.length."
 
 ///////////////////Problem 9//////////////////
@@ -188,8 +180,8 @@ var funcC = () => 3
 
 //Which of the following functions will be hoisted?
 //Remove the function names that are NOT hoisted.
-// var answer5 = ["funcA", "funcB", "funcC"]
-var answer5 = ["funcA"]
+
+var answer5 = ["funcA", "funcB", "funcC"]
 
 
 ///////////////////Problem 10//////////////////
@@ -203,12 +195,5 @@ var answer5 = ["funcA"]
 
 //NOTE: Don't invoke the functions that you return
 
-function janus(thisWay){
-  function left(){
-    return "Looking backwards"
-  }
-  function right(){
-    return "Looking forwards"
-  }
-  return thisWay ? right : left
-}
+//Code here
+
