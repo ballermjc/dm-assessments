@@ -5,9 +5,9 @@
 //////////////////PROBLEM 1////////////////////
 
 //Create a function called addMoreDucks that takes in an array
-//and if the array's length is greater than 4, inserts the 
-//string '42 ducks' as the 3rd element of the array. addMoreDucks
-//should return the array.
+//and if the array's length is greater than 4, replace the
+//3rd element of the array with the string '42 ducks'. 
+//addMoreDucks should return the array.
 
   //Code here
   function addMoreDucks(arr){
@@ -36,14 +36,15 @@
 //////////////////PROBLEM 3////////////////////
 
 //Create a function called changeName that takes in an array
-//and finds the element "Tolkn", and changes it to "Tolkein".
+//and finds the element "Tolkn", and changes it to "Tolkien".
 //changeName should return the array.
 
   //Code here
   function changeName(arr){
-    arr[arr.indexOf('Tolkn')] = "Tolkein"
+    arr[arr.indexOf('Tolkn')] = "Tolkien"
     return arr
   }
+
 
 //////////////////PROBLEM 4////////////////////
 
@@ -76,6 +77,7 @@
     newSunrise[0] = "green"
     return newSunrise
   }
+
 
 //////////////////PROBLEM 6////////////////////
 
