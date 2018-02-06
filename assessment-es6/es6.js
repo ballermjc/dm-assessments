@@ -74,8 +74,8 @@ var obj = { a: "a", b: "b", c: "c" }
 
 //var answers = ["Example A", "Example B", "Example C", "Example D"]
 var answers = ["Example B", "Example C", "Example D"]
-var answers = ["Example A", "Example B"]
-var answers = ["Example C", "Example D"]
+// var answers = ["Example A", "Example B"]
+// var answers = ["Example C", "Example D"]
 
 
 //////////////////PROBLEM 6////////////////////
