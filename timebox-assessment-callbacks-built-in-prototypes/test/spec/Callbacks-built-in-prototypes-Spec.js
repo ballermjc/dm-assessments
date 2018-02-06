@@ -80,7 +80,7 @@ describe('callbacks-built-in-prototypes', function () {
 			];
 			var itIs = cookieLoversOnly(guestList)
 			let allGood = true
-			shouldBe.map((e, i) => {
+			shouldBe.forEach((e, i) => {
 				if (e.name !== itIs[i].name || e.favoriteCookie !== itIs[i].favoriteCookie) {
 					allGood = false
 				}
@@ -99,13 +99,19 @@ describe('callbacks-built-in-prototypes', function () {
 		it('should exist', function () {
 			expect(changeValue).toBeDefined();
 		})
-		let old = ["Elizabeth", "Mary", "Victoria"]
-		let newArr = []
-		changeValue(old, (str) => newArr.push(str.toUpperCase()))
-		let shouldBe = ["ELIZABETH", "MARY", "VICTORIA"]
-		it('should return an array with the given string added to the end of each element', function () {
+		it('should invoke the callback function as many times as there are elements in the array', function() {
+			let arr = [1, 2, 3];
+			let	count = 0;
+			changeValue(arr, (num) => count++)
+			expect(count).toBe(3);
+		})
+		it('should pass the element into the callback function as an argument when it is invoked', function () {
+			let old = ["Elizabeth", "Mary", "Victoria"]
+			let newArr = []
+			changeValue(old, (str) => newArr.push(str.toUpperCase()))
+			let shouldBe = ["ELIZABETH", "MARY", "VICTORIA"]
 			let correct = true
-			shouldBe.map((e, i) => {
+			shouldBe.forEach((e, i) => {
 				if(e !== newArr[i]) correct = false
 			})
 			expect(correct).toBe(true);
@@ -190,7 +196,7 @@ describe('callbacks-built-in-prototypes', function () {
 		it('should exist', function () {
 			expect(mathResult).toBeDefined();
 		})
-		it('should equal the correct answer when passed add, 2, 3', function() {
+		it('should equal the correct answer when passed complex, 2, 3', function() {
 			expect(math(complex, 2, 3) === correct).toBe(true)
 		})
 		
@@ -198,24 +204,22 @@ describe('callbacks-built-in-prototypes', function () {
 
 	describe('Problem 9 - invokesCallbacks', function () {
 		function greaterThan10() { return "I am greater than 10"}
-		function greaterThan10Too() { return 27}
 		function lessThan10() { return "I am less than or equal to 10"}
-		function lessThan10Too() { return 3}
 		it('should exist', function () {
 			expect(invokesCallbacks).toBeDefined();
 		})
-		it('should return the first callback param invoked if num param > 10', function() {
+		it('should return the first callback param invoked if the num param is greater than 10', function() {
 			var a = invokesCallbacks(28, greaterThan10, lessThan10)
-			var b = invokesCallbacks(10, greaterThan10, lessThan10)
-			var c = invokesCallbacks(5, greaterThan10, lessThan10)
-			let correct = a === "I am greater than 10" && b === "I am less than or equal to 10" && c === "I am less than or equal to 10"
+			var b = invokesCallbacks(15, greaterThan10, lessThan10)
+			var c = invokesCallbacks(11, greaterThan10, lessThan10)
+			let correct = a === "I am greater than 10" && b === "I am greater than 10" && c === "I am greater than 10"
 			expect(correct).toBe(true)
 		})
-		it('should return the first callback param invoked if num param > 10', function() {
-			var a = invokesCallbacks(28, greaterThan10Too, lessThan10Too)
-			var b = invokesCallbacks(10, greaterThan10Too, lessThan10Too)
-			var c = invokesCallbacks(5, greaterThan10Too, lessThan10Too)
-			let correct = a === 27 && b === 3 && c === 3
+		it('should return the first callback param invoked if the num param is less than or equal to 10', function() {
+			var a = invokesCallbacks(5, greaterThan10, lessThan10)
+			var b = invokesCallbacks(2, greaterThan10, lessThan10)
+			var c = invokesCallbacks(7, greaterThan10, lessThan10)
+			let correct = a === "I am less than or equal to 10" && b === "I am less than or equal to 10" && c === "I am less than or equal to 10"
 			expect(correct).toBe(true)
 		})
 		
@@ -223,10 +227,14 @@ describe('callbacks-built-in-prototypes', function () {
 
 	describe('Problem 10 - greeting', function () {
 		it('should be undefined less than 1 second after timedGreeting is called', function () {
-			let allGood = false
-			timedGreeting(() => "hello")
-			if(!greeting) allGood = true
-			expect(allGood).toBe(true);
+			greeting = undefined
+			timedGreeting(() => "Hey!")
+			let allGood = false;
+			setTimeout(() => {
+				if(!greeting) allGood = true
+				expect(allGood).toBe(true);
+				done()
+			}, 999)
 		})
 		it('should be defined 1 second after timedGreeting is called', function (done) {
 			greeting = undefined
@@ -236,7 +244,7 @@ describe('callbacks-built-in-prototypes', function () {
 				if(greeting === "Hey!") allGood = true
 				expect(allGood).toBe(true);
 				done()
-			}, 1001)
+			}, 1000)
 		})
 	})
 	

@@ -6,7 +6,7 @@
 //Write a function called dragonMapper that takes in an 
 //array and maps over each element, adding the string 
 //'...here be dragons' to the end of each element. 
-//dragonMapper should return the result. You should
+//dragonMapper should return the the new array. You should
 //use the built-in array method .map
   
   //Code here
@@ -21,7 +21,7 @@
 //Write a function called cookieLoversOnly that takes 
 //in an array and filters out every object that
 //does NOT have the key favoriteCookie.
-//cookieLoversOnly should return the result.
+//cookieLoversOnly should return the filtered array.
   
   //Code here
   function cookieLoversOnly(arr) {
@@ -32,14 +32,16 @@
 
 //Write a function called changeValue that takes 
 //in an array, and a callback function.
-//changeValue should call that callback on each 
-//element of the array!!
+//changeValue should invoke the callback function 
+//for every element in the array. 
+//changeValue should pass the current element into 
+//the callback function as an argument every time it is invoked.
 //Hint: there is an array method for this.
 
 
   //Code here
   function changeValue(arr, callback){
-    return arr.forEach(e => callback(e))
+    arr.forEach(e => callback(e))
   }
 
 
@@ -47,7 +49,9 @@
 
 //Write a function called findProduct that takes in 
 //an array, and uses .reduce to find the product of 
-//the elements. Return the product.
+//the elements (here the word product means the result 
+//of multiplying all the elements together)
+//Return the product.
   
   //Code here
   function findProduct(arr){
@@ -58,7 +62,7 @@
 //////////////////PROBLEM 5////////////////////
 
 //Write a function called cipherize that takes in 
-//an array, a string. It should use the 
+//an array, and a string. It should use the 
 //array method .indexOf to find the index of the passed-in 
 //string in the array. Then, it should use the method .charAt
 //to find the character at that index, in the string. 
@@ -143,7 +147,7 @@
 //Within the function timedGreeting below, create a
 //setTimeout (a native javascript method) 
 //that assigns the result 
-//of calling the callback parameter 
+//of invoking the callback parameter 
 //to the variable greeting, after 1 second.
 
   var greeting;
