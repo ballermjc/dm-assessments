@@ -1,7 +1,5 @@
 ///////////////////Problem 1///////////////////
-//Given the object below, uncomment the correct usage
-//of dot notation to access the duck's "name" property,
-//and of bracket notation to access duck's "bites" property.
+//Given the object below, uncomment the line with the correct usage:
 
 var duck = {
   name: "Stefan",
@@ -10,10 +8,12 @@ var duck = {
   fluffiness: 100
 }
 
+//1. Using dot notation to access the duck's "name" property.
 // var accessByDotNotation = duck."name"
 // var accessByDotNotation = Object[duck].name
 var accessByDotNotation = duck.name
 
+//2. Using bracket notation to access duck's "bites" property.
 // var accessByBracketNotation = duck{"bites"}
 // var accessByBracketNotation = Object[duck][bites]
 // var accessByBracketNotation = duck[bites]
@@ -22,9 +22,9 @@ var accessByBracketNotation = duck["bites"]
 
 
 ///////////////////Problem 2///////////////////
-//Given the object below, add a method called moveCities
-//that takes in a new city, and changes the object's
-//city property the new city.
+//Add a method called moveCities to the object below.
+//moveCities should take in a new city, and change the city
+//property on the object to the new city passed in.
 
 var person = {
   name: "Ella",
@@ -39,24 +39,32 @@ person.moveCities = function(newCity){
 
 
 ///////////////////Problem 3///////////////////
-//Create a function called "keyAccessor" that takes
-//in 2 parameters, an array of names, and an object.
-//The array of names represents the keys in the object.
-//keyAccessor should loop through the array of names, 
-//accessing the values of the each name (key) in the object, 
-//and pushing the values into an empty array. 
+//Create a function called keyAccessor. keyAccessor should take
+//in two parameters: an array of people, and an object.
+//Each person's name is also a property on an object.
+//keyAccessor should loop through the array of names, and 
+//access corresponding values for each name in the object, 
+//pushing the values into an empty array. 
 //keyAccessor should return the new array.
 
 //Example set of names that could be passed in
-var names = ["anne", "brandon", "charles", "diana"]
+var names = ["Dan", "Todd", "Andrew", "Doug"]
 
 //Example object that could be passed in
 var people = {
-  anne: { city: "New York", age: 23 },
-  brandon: { city: "London", age: 28 },
-  charles: { city: "Seattle", age: 33 },
-  diana: { city: "Los Angeles", age: 20 },
+  Dan: { city: "Las Vegas", age: 24 },
+  Todd: { city: "France", age: 28 },
+  Andrew: { city: "Portland", age: 12 },
+  Doug: { city: "New New York", age: 56 },
 }
+
+//Example new array that would be returned
+var sampleOutput = [
+  { city: "Las Vegas", age: 24 },
+  { city: "France", age: 28 },
+  { city: "Portland", age: 12 },
+  { city: "New New York", age: 56 }
+]
 
 //CODE HERE
 function keyAccessor(arr, obj){
@@ -95,31 +103,6 @@ var doors = {
 }
 
 var doorKeys = Object.keys(doors)
-
-
-//Data types	
-//bool -- done
-//string --	done
-//int	-- done
-//function --	done
-//object -- done	
-//array	-- done
-
-//typeof	
-//null	
-
-//undefined	
-//NaN	
-//isNaN	
-//isArray
-
-//parsing	
-//coercion	
-
-//var	
-//copy by reference	
-//copy by value	
-
 
 
 ///////////////////Problem 6//////////////////
@@ -261,25 +244,25 @@ function makeItAString(b){
 ///////////////////Problem 20//////////////////
 //Uncomment the correct answers below
 
-//What will 100 || 0 result in?
+//What will 100 || 0 be evaluted to?
 var answer1 = 100
 // var answer1 = 0
 
-//What will "Hello" && "Goodbye" result in?
+//What will "Hello" && "Goodbye" be evaluted to?
 // var answer2 = "Hello"
 var answer2 = "Goodbye"
 
-//What will 14 + "" result in?
+//What will 14 + "" be evaluted to?
 var answer3 = "14"
 // var answer3 = 14
 
-//What will "14" - 10 result in?
+//What will "14" - 10 be evaluted to?
 // var answer4 = "14"
 // var answer4 = "1410"
 var answer4 = 4
 // var answer4 = 1410
 
-//What will ["anne", "bob"] + ["charlie"] result in?
+//What will ["anne", "bob"] + ["charlie"] be evaluted to?
 // var answer5 = ["anne", "bob", "charlie"]
 // var answer5 = "annebobcharlie"
 var answer5 = "anne,bobcharlie"
