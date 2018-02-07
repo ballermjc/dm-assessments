@@ -28,9 +28,11 @@ This is incredibly important. Mentors must set expectations with all students be
 
 ## Process
 
-Demos - occurring on simulation days. Mentors <strong>must walk around to and check off competencies for each of their assigned students 3x for each students</strong>. This keeps the students motivated and feeling like they are accomplishing goals! Many of them will pass a competency without realizing it, or be very close to passing one, so be thorough. Ask them which ones they believe that have passed, but also check for any they have unconsciously passed.
+# Demos 
+Occurring on simulation days. Mentors <strong>must walk around to and check off competencies for each of their assigned students 3x for each students</strong>. This keeps the students motivated and feeling like they are accomplishing goals! Many of them will pass a competency without realizing it, or be very close to passing one, so be thorough. Ask them which ones they believe that have passed, but also check for any they have unconsciously passed.
 
-Assessments - occurring mainly on Fridays in the second half of the course. Assessments are sets of JS problems with a Jasmine spec runner. TBD forms of distribution.
+# Assessments
+Occurring mainly on Fridays in the second half of the course. Assessments are sets of JS problems with a Jasmine spec runner. TBD forms of distribution.
 
 ## Scheduling - CURRENT THOUGHTS
 
