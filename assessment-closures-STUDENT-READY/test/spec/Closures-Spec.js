@@ -23,25 +23,25 @@ function arrayDoesNotInclude(arr, values){
 //Test Suite
 describe('scope-closures', function () {
 
-	describe('Problem 1 - travel ', function () {
+	describe('Problem 1 - fairytale ', function () {
 		it('should exist', function () {
-			expect(travel).toBeDefined()
+			expect(fairytale).toBeDefined()
 		})
 		it('should be a function', function () {
-			expect(typeof travel).toBe('function')
+			expect(typeof fairytale).toBe('function')
 		})
 		it('should return a function', function () {
-			var toLondon = travel("London", "plane")
+			var toLondon = fairytale("London", "plane")
 			expect(typeof toLondon).toBe('function')
 		})
-		it('should return a function, which itself returns "Salt Lake City to London, plane", when passed "London", "plane"', function () {
-			var toLondon = travel("London", "plane")
-			expect(toLondon()).toEqual('Salt Lake City to London, plane')
+		it('should return a function, which itself returns "A long time ago, Princess Leia defeated the evil wizard with X-wing fighters", when passed "Princess Leia", "X-wing fighters"', function () {
+			var princessLeia = fairytale("Princess Leia", "X-wing fighters")
+			expect(princessLeia()).toEqual('A long time ago, Princess Leia defeated the evil wizard with X-wing fighters')
 		})
 		it('should work as required', function () {
-			var toHawaii = travel("Hawaii", "plane")
-			var going = toHawaii()
-			var correct = going === 'Salt Lake City to Hawaii, plane' && typeof toHawaii === 'function'
+			var eowyn = fairytale("Eowyn", "a sword")
+			var win = eowyn()
+			var correct = win === 'A long time ago, Eowyn defeated the evil wizard with a sword' && typeof eowyn === 'function'
 			expect(correct).toBe(true)
 		})
 	})

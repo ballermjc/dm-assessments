@@ -3,17 +3,17 @@
 
 //////////////////PROBLEM 1////////////////////
 
-//Create a function called travel. It should take in 2 parameters,
-//destination and travelMode (both will be strings). Inside the 
-//travel function, declare a variable called "origin" and assign 
-//it the value "Salt Lake City".
-//Travel should return a function, which returns a string: 
-//origin + " to " + destination + ", " + travelMode
+//Create a function called fairytale. It should take in 2 parameters,
+//heroine and magicItem (both will be strings). Inside the 
+//fairytale function, declare a variable called "time" and assign 
+//it the value "A long time ago".
+//fairytale should return a function, which returns a string: 
+//time + ", " + heroine + " defeated the evil wizard with " + magicItem
 
-function travel(destination, travelMode) {
-  var origin = "Salt Lake City"
+function fairytale(heroine, magicItem) {
+  var time = "A long time ago"
   return function() {
-    return origin + " to " + destination + ", " + travelMode
+    return time + ", " + heroine + " defeated the evil wizard with " + magicItem
   }
 }
 
