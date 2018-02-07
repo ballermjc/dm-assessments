@@ -25,69 +25,7 @@ function arrayDoesNotInclude(arr, values){
 //Test Suite
 describe('context', function () {
 
-	describe('Problem 1 - context', function () {
-		it('should be correct', function () {
-			let correct = context === "The object which is the execution context of the running code, represented by 'this' keyword."
-			expect(correct).toBe(true)
-		})
-		
-	})
-
-	describe('Problem 2 - contextRubberDucks', function () {
-		it('should be correct', function () {
-			let correct = contextRubberDucks === "window"
-			expect(correct).toBe(true)
-		})
-		
-	})
-
-	describe('Problem 3 - contextBreakMetro', function () {
-		it('should be correct', function () {
-			let correct = contextBreakMetro === "dcMetro"
-			expect(correct).toBe(true)
-		})
-		
-	})
-
-	describe('Problem 4 - ', function () {
-		it('areWeThereYet should be a function', function () {
-			expect(typeof areWeThereYet).toEqual('function')
-		})
-		it('moreToGo should be correct', function () {
-			let correct = isNaN(moreToGo)
-			expect(correct).toEqual(true)
-		})
-		it('valMoreToGo should be correct', function () {
-			let correct = isNaN(valMoreToGo)
-			expect(correct).toEqual(true)
-		})
-		it('contextAreWeThereYet should be correct', function () {
-			let correct = contextAreWeThereYet === "window"
-			expect(correct).toEqual(true)
-		})
-		
-	})
-
-	describe('Problem 5 - ', function () {
-		it('almostThere should be a function', function () {
-			expect(typeof almostThere).toEqual('function')
-		})
-		it('finalDescent should be correct', function () {
-			let correct = finalDescent === -21500
-			expect(correct).toEqual(true)
-		})
-		it('valFinalDescent should be correct', function () {
-			let correct = valFinalDescent === -21500
-			expect(correct).toEqual(true)
-		})
-		it('contextAlmostThere should be correct', function () {
-			let correct = contextAlmostThere === "descent"
-			expect(correct).toEqual(true)
-		})
-		
-	})
-
-	describe('Problem 6 - ', function () {
+	describe('Problem 1 - ', function () {
 		it('Q1 - book1CheckOut should be correct', function () {
 			let correct = book1CheckOut === '"One Fish, Two Fish, Red Fish, Blue Fish" is available for check-out.'
 			expect(correct).toEqual(true)
@@ -124,7 +62,7 @@ describe('context', function () {
 			expect(correct).toEqual(true)
 		})
 	})
-	describe('Problem 7 - ', function () {
+	describe('Problem 2 - ', function () {
 		it('Q1 - queenAnne should be correct', function () {
 			let correct = queenAnne.name === 'Anne Boleyn'
 							&& queenAnne.age === 30
@@ -139,7 +77,7 @@ describe('context', function () {
 		})
 	})
 
-	describe('Problem 8 - ', function () {
+	describe('Problem 3 - ', function () {
 		it('Q1 - q1CastleContext should be correct', function () {
 			let correct = q1CastleContext === "new"
 			expect(correct).toEqual(true)
