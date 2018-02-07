@@ -34,19 +34,20 @@ Assessments - occurring mainly on Fridays in the second half of the course. Asse
 
 ## Scheduling - CURRENT THOUGHTS
 
-Week // In-Class // Competencies</br>
- 1 // Lecture // Change Day 1 afternoon lecture to test & remediation</br>
- 2 // Lecture // ---</br>
- 3 // Lecture // Sim 1 & accompanying demos</br>
- 4 // Lecture // Sim 2 & accompanying demos</br>
- 5 // Lecture // Sim 3 & accompanying demos</br>
- 6 // Personals // Assessment Day (Friday afternoon)</br>
- 7 // Personals // ---</br>
- 8 // Angular // Sim 4 & accompanying demos</br>
- 9 // CS & Job Prep // Assessment Day (Monday afternoon); also mentor workshops throughout week.</br>
-10 // Groups // Assessment Day (Friday afternoon)</br>
-11 // Groups // Assessment Day (Friday afternoon)</br>
-12 // Polishing & Job Prep // 2 Random Assessment Days throughout week</br>
+Week | In-Class | Competencies
+--- | --- | ---
+ 1 | Lecture | Change Day 1 afternoon lecture to test & remediation
+ 2 | Lecture | ---
+ 3 | Lecture | Sim 1 & accompanying demos
+ 4 | Lecture | Sim 2 & accompanying demos
+ 5 | Lecture | Sim 3 & accompanying demos
+ 6 | Personals | Assessment Day (Friday afternoon)
+ 7 | Personals | ---
+ 8 | Angular | Sim 4 & accompanying demos
+ 9 | CS & Job Prep | Assessment Day (Monday afternoon); also mentor workshops throughout week.
+10 | Groups | Assessment Day (Friday afternoon)
+11 | Groups | Assessment Day (Friday afternoon)
+12 | Polishing & Job Prep | 2 Random Assessment Days throughout week
 
 
 
