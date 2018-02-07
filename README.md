@@ -1,4 +1,4 @@
-### Competencies
+# Competencies
 
 Competencies will be demoed and assessed throughout the cohort. A map of the current plan can be found [here](https://docs.google.com/spreadsheets/d/1SrbTzQdwkpuuzpOryp1dnKq21rdwCbFST3gV_oCnujc/edit#gid=422070687), in the "Competency + Assessment Map" tab.
 
