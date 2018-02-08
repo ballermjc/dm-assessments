@@ -73,9 +73,9 @@ That should give student 20 or so extra hours of padding or almost 50% extra tim
 
 These repos are available for students to use for additional days to work on passing of demo competencies.
 
-https://github.com/Be-The-Bert/library-simulation
-https://github.com/Alan-Miller/animal-simulation
-https://github.com/bethtelford/restaurant-simulation
-HTML & CSS Only : https://github.com/Be-The-Bert/static-video-simulation
-HTML & CSS only : https://github.com/Be-The-Bert/static-audio-simulation
+* https://github.com/Be-The-Bert/library-simulation
+* https://github.com/Alan-Miller/animal-simulation
+* https://github.com/bethtelford/restaurant-simulation
+* HTML & CSS Only : https://github.com/Be-The-Bert/static-video-simulation
+* HTML & CSS only : https://github.com/Be-The-Bert/static-audio-simulation
 
