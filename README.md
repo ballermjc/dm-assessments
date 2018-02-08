@@ -29,20 +29,24 @@ This is incredibly important. Mentors must set expectations with all students be
 ## Process
 
 ### Demos 
-Occurring on simulation days. Mentors <strong>must walk around to and check off competencies for each of their assigned students 3x for each students</strong>. This keeps the students motivated and feeling like they are accomplishing goals! Many of them will pass a competency without realizing it, or be very close to passing one, so be thorough. Ask them which ones they believe that have passed, but also check for any they have unconsciously passed.
+Occurring on simulation days. Mentors <strong>must walk around to and check off competencies for each of their assigned students 3x for each students</strong>. This keeps the students motivated and feeling like they are accomplishing goals! Many of them will pass a competency without realizing it, or be very close to passing one, so be thorough. Go through the categories of competenices and asked them if they've worked in that area.  
+
+IE - 'Have you done any react? You have, cool, what have you done?  Let's look at the list.  Oh look, you're pretty close to this one I think you should try and check that one off next, and it looks like you've got this one, let's check it off.' 
+
+Mentors should be encouraged to err on the side of leniency.  If they feel a student gets the concepts but made a small mistake and understands why, they should get credit.  Demos are not assessments, they're big picture stuff.  We'll get picky with other competencies later.  We want students to feel rewarded and encouraged to build real things.
 
 ### Assessments
 Occurring mainly on Fridays in the second half of the course. Assessments are sets of JS problems with a Jasmine spec runner. TBD forms of distribution.
 
-## Scheduling - CURRENT THOUGHTS
+## Testing Scheduling - CURRENT THOUGHTS
 
 Week | In-Class | Competencies
 --- | --- | ---
  1 | Lecture | Change Day 1 afternoon lecture to test & remediation
  2 | Lecture | ---
  3 | Lecture | Sim 1 & accompanying demos
- 4 | Lecture | Sim 2 & accompanying demos
- 5 | Lecture | Sim 3 & accompanying demos
+ 4 | Lecture | Sim 2 & accompanying demos + Sim 1 competencies
+ 5 | Lecture | Sim 3 & accompanying demos + Sim 1 & Sim 2 competencies
  6 | Personals | Assessment Day (Friday afternoon)
  7 | Personals | ---
  8 | Angular | Sim 4 & accompanying demos
@@ -51,5 +55,27 @@ Week | In-Class | Competencies
 11 | Groups | Assessment Day (Friday afternoon)
 12 | Polishing & Job Prep | 2 Random Assessment Days throughout week
 
+#### Internal Pacing Notes
 
+So far off of testing students should be averaging 6-10 competencies after an entire friday of coding.  
+
+This gives 5 full days (weeks 3,4,5 and 2 days on the last week) + 6 afternoons.
+that totals 64 total in-class hours to work on this.
+If students are getting 10 competencies a week on demos that should take the 40 hours.
+Assessments are scoped to take 5.5 hours. 
+That should give student 20 or so extra hours of padding or almost 50% extra time to meet the requirements to badge.
+
+* Students can work on demos weeks 3-5 and are encouraged to attemp their first assessments week 6.
+* Students should be encouraged to utilize interim week days to 'catch' up if they're behind.  
+
+
+## Additional Demos
+
+These repos are available for students to use for additional days to work on passing of demo competencies.
+
+https://github.com/Be-The-Bert/library-simulation
+https://github.com/Alan-Miller/animal-simulation
+https://github.com/bethtelford/restaurant-simulation
+HTML & CSS Only : https://github.com/Be-The-Bert/static-video-simulation
+HTML & CSS only : https://github.com/Be-The-Bert/static-audio-simulation
 
