@@ -5,7 +5,7 @@ Competencies will be demoed and assessed throughout the cohort. A map of the cur
 
 ## Demos
 
-Demos will be done on simulation days. They will cover "big picture" - can the student build an app? With full functionality? While most of the demos are required, there are several that we deemed optional. Required skills must be demoed and passed off to badge; optional is for the student to push themselves.
+Demos will be done on simulation days. They will cover "big picture" - can the student build an app? With full functionality? While most of the demos are required, there are several that we deemed optional. Required skills must be demoed and passed off to badge; optional is for the student to push themselves in certain areas, and <strong>they must choose five to pass off</strong>.
 
 
 ## Assessments
@@ -38,7 +38,7 @@ Mentors should be encouraged to err on the side of leniency.  If they feel a stu
 ### Assessments
 Occurring mainly on Fridays in the second half of the course. Assessments are sets of JS problems with a Jasmine spec runner. TBD forms of distribution.
 
-## Testing Scheduling - CURRENT THOUGHTS
+## Testing Scheduling - CHANGE LOG
 
 Week | In-Class | Competencies
 --- | --- | ---
@@ -55,6 +55,11 @@ Week | In-Class | Competencies
 11 | Groups | Assessment Day (Friday afternoon)
 12 | Polishing & Job Prep | 2 Random Assessment Days throughout week
 
+## Testing Scheduling - CURRENT THOUGHTS
+
+<img src="./images/Web Schedule Overview (1).svg"/>
+<img src="./images/Web Schedule Overview (2).svg"/>
+
 #### Internal Pacing Notes
 
 So far off of testing students should be averaging 6-10 competencies after an entire friday of coding.  
@@ -65,7 +70,7 @@ If students are getting 10 competencies a week on demos that should take the 40 
 Assessments are scoped to take 5.5 hours. 
 That should give student 20 or so extra hours of padding or almost 50% extra time to meet the requirements to badge.
 
-* Students can work on demos weeks 3-5 and are encouraged to attemp their first assessments week 6.
+* Students can work on demos weeks 3-5 and are encouraged to attempt their first assessments week 6.
 * Students should be encouraged to utilize interim week days to 'catch' up if they're behind.  
 
 
