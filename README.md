@@ -37,7 +37,7 @@ Mentors should be encouraged to err on the side of leniency.  If they feel a stu
 
 The demo instructions for each Simulation are based on functionality. This means that the instructions for Simulation 1 are specific to that Simulation. If a student wishes to pass off Simulation 1 competencies off during Simulation 2 it is up to the mentor's discretion what functionality in Simulation 2 is required to pass the competency from Simulation 1.
 
-<strong>The spreadsheets for tracking demo competencies and instructions for cloning the sheets can be found [here] (https://drive.google.com/drive/u/1/folders/1Zar-r4m9wki8lAqkoLrW9xTFFRiLBYrD)
+<strong>The spreadsheets for tracking demo competencies and instructions for cloning the sheets can be found [here](https://drive.google.com/drive/u/1/folders/1Zar-r4m9wki8lAqkoLrW9xTFFRiLBYrD) </strong>
 
 ### Assessments
 Occurring mainly on Fridays in the second half of the course. Assessments are sets of JS problems with a Jasmine spec runner. TBD forms of distribution.
