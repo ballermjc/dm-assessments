@@ -29,11 +29,15 @@ This is incredibly important. Mentors must set expectations with all students be
 ## Process
 
 ### Demos 
-Occurring on simulation days. Mentors <strong>must walk around to and check off competencies for each of their assigned students 3x for each students</strong>. This keeps the students motivated and feeling like they are accomplishing goals! Many of them will pass a competency without realizing it, or be very close to passing one, so be thorough. Go through the categories of competenices and asked them if they've worked in that area.  
+Occurring on simulation days. Mentors <strong>must walk around to and check off competencies for each of their assigned students a minimum of 3x for each student</strong>. This keeps the students motivated and feeling like they are accomplishing goals! Many of them will pass a competency without realizing it, or be very close to passing one, so be thorough. Go through the categories of competenices and asked them if they've worked in that area.  
 
 IE - 'Have you done any react? You have, cool, what have you done?  Let's look at the list.  Oh look, you're pretty close to this one I think you should try and check that one off next, and it looks like you've got this one, let's check it off.' 
 
 Mentors should be encouraged to err on the side of leniency.  If they feel a student gets the concepts but made a small mistake and understands why, they should get credit.  Demos are not assessments, they're big picture stuff.  We'll get picky with other competencies later.  We want students to feel rewarded and encouraged to build real things.
+
+The demo instructions for each Simulation are based on functionality. This means that the instructions for Simulation 1 are specific to that Simulation. If a student wishes to pass off Simulation 1 competencies off during Simulation 2 it is up to the mentor's discretion what functionality in Simulation 2 is required to pass the competency from Simulation 1.
+
+<strong>The spreadsheets for tracking demo competencies and instructions for cloning the sheets can be found [here] (https://drive.google.com/drive/u/1/folders/1Zar-r4m9wki8lAqkoLrW9xTFFRiLBYrD)
 
 ### Assessments
 Occurring mainly on Fridays in the second half of the course. Assessments are sets of JS problems with a Jasmine spec runner. TBD forms of distribution.
