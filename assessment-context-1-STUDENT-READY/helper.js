@@ -1,5 +1,0 @@
-
-function helper(){
-    return "HELLLLOOOO"
-}
-
